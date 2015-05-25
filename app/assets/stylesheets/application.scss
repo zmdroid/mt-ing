@@ -1,5 +1,10 @@
 // VENDOR
+@import "bootstrap-sprockets";
 @import "bootstrap";
 
 // MT-ING
 @import "static_pages";
+
+#navigation {
+  background-color: grey;
+}

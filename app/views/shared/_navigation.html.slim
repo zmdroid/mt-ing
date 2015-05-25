@@ -1,6 +1,37 @@
-.container-fluid
-  .row
-    .col-xs-2.col-xs-offset-2
-      h1 Hello
-    .col-xs-4.col-xs-offset-2
-      h1 world!
+nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle.collapsed (type="button" data-toggle="collapse" data-target="#menu_content")
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand#mt-ing_brand (href="/home")
+        = image_tag('mt-ing_icon.png', alt: 'MT-ING')
+        strong Brand
+
+    .collapse.navbar-collapse#menu_content
+      ul.nav.navbar-nav.navbar-right
+        li
+          a (href="#") NASLOVNICA
+        li.main_menu_divider.hidden-xs
+          | /
+        li.dropdown (role="presentation")
+          a.dropdown-toggle (href="#" data-toggle="dropdown" role="button" aria-expanded="false")
+            | O NAMA
+            span.caret
+          ul.dropdown-menu.dropdown-menu-left (role="menu")
+            li (role="presentation")
+              a (role="menuitem" tabindex="-1" href="#") Povijest kompanije
+            li (role="presentation")
+              a (role="menuitem" tabindex="-1" href="#") Postrojenje
+            li (role="presentation")
+              a (role="menuitem" tabindex="-1" href="#") Zaposlenici
+        li.main_menu_divider.hidden-xs
+          | /
+        li
+          a (href="#") PONUDA
+        li.main_menu_divider.hidden-xs
+          | /
+        li
+          a (href="#") KONTAKT

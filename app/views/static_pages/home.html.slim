@@ -1,21 +1,26 @@
-.container-fluid
-  #home-page_carousel.carousel.slide (data-ride="carousel")
-    ol.carousel-indicators
-      li.active (data-target="#home-page_carousel" data-slide-to="0")
-      li (data-target="#home-page_carousel" data-slide-to="1")
-      li (data-target="#home-page_carousel" data-slide-to="2")
+#home_page_carousel.carousel.slide (data-ride="carousel")
+  ol.carousel-indicators
+    li.active (data-target="#home_page_carousel" data-slide-to="0")
+    li (data-target="#home_page_carousel" data-slide-to="1")
+    li (data-target="#home_page_carousel" data-slide-to="2")
 
-    .carousel-inner (role="listbox")
-      .item.active
-        = image_tag('home_page/home_page_default.jpg', alt: 'MT-ING staklo 1', height: 250, width: 1500)
-      .item
-        = image_tag('home_page/home_page_1.jpg', alt: 'MT-ING staklo 2', height: 250, width: 1500)
-      .item
-        = image_tag('home_page/home_page_2.jpg', alt: 'MT-ING staklo 3', height: 250, width: 1500)
+  .carousel-inner (role="listbox")
+    .item.active
+      = image_tag('home_page/home_page_default.jpg', alt: 'MT-ING staklo 1', height: 250, width: 1500)
+    .item
+      = image_tag('home_page/home_page_1.jpg', alt: 'MT-ING staklo 2', height: 250, width: 1500)
+    .item
+      = image_tag('home_page/home_page_2.jpg', alt: 'MT-ING staklo 3', height: 250, width: 1500)
 
-    a.left.carousel-control (href="#home-page_carousel" role="button" data-slide="prev")
-      span.glyphicon.glyphicon-chevron-left (aria-hidden="true")
-      span.sr-only Previous
-    a.right.carousel-control (href="#home-page_carousel" role="button" data-slide="next")
-      span.glyphicon.glyphicon-chevron-right (aria-hidden="true")
-      span.sr-only Next
+.container-fluid.container_bottom
+  .row
+    .col-xs-12.skewer
+  .row
+    .col-xs-12.col-sm-4.col-sm-offset-2
+      h1 DOBRO DOŠLI!
+      div#green_line
+      p
+        | Naš stručni tim ponudit će vam najbolje rješenje za funkcionalno i 
+        | estetsko uređenje vaših stambenih, poslovnih i drugih objekata i 
+        | otvorenih prostora svih namjena.
+      strong Vaš MT-ING

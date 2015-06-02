@@ -1,11 +1,39 @@
-h1 {
-  color: blue;
+#home_page_carousel {
+  width: 100%;
+
+  .carousel-indicators {
+    margin-bottom: 80px;
+  }
+
+  .carousel-inner {
+    height: 500px;
+  }
 }
 
-p {
-  color: orange;
+.container_bottom {
+  position: relative;
+  height: 39.1%;
+  background-color: #293036;
+
+  .skewer {
+    position: absolute;
+    top: -80;
+    height: 150px;
+    width: 100%;
+    transform: skewY(-3deg);
+    background-color: #293036;
+  }
+
+  h1 {
+    color: #f5f5f5;
+  }
+
+  p {
+    color: #b7b8b9;
+  }
+
+  strong {
+    color: #777a7d;
+  }
 }
 
-.go_grey {
-  background-color: grey;
-}

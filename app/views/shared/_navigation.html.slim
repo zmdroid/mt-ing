@@ -1,37 +1,40 @@
 nav.navbar.navbar-default
-  .container-fluid
+  .container
     .navbar-header
-      button.navbar-toggle.collapsed (type="button" data-toggle="collapse" data-target="#menu_content")
+      // Hamburger icon on xs screens.
+      button.navbar-toggle.collapsed.mobile_button (type="button" data-toggle="collapse" data-target="#menu_content")
         span.sr-only Toggle navigation
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand#mt-ing_brand (href="/home")
-        = image_tag('mt-ing_icon.png', alt: 'MT-ING')
-        strong Brand
+        span.icon-bar
+      // Setting MT-ING logo.
+      a.navbar-brand (href="/home")
+        = image_tag('icons/mt-ing_icon.png', class: 'logo_img', alt: 'MT-ING')
 
+    // Main menu on the right side.
     .collapse.navbar-collapse#menu_content
-      ul.nav.navbar-nav.navbar-right
-        li
-          a (href="#") NASLOVNICA
-        li.main_menu_divider.hidden-xs
+      ul.nav.navbar-nav.navbar-right.main_list
+        li.menu_item
+          = activate_link(@home_active, 'NASLOVNICA', home_path)
+        li.menu_divider.hidden-xs
           | /
-        li.dropdown (role="presentation")
+        li.menu_item.dropdown (role="presentation")
           a.dropdown-toggle (href="#" data-toggle="dropdown" role="button" aria-expanded="false")
             | O NAMA
             span.caret
-          ul.dropdown-menu.dropdown-menu-left (role="menu")
+          ul.dropdown-menu.dropdown-menu-left.sub_list (role="menu")
             li (role="presentation")
               a (role="menuitem" tabindex="-1" href="#") Povijest kompanije
             li (role="presentation")
               a (role="menuitem" tabindex="-1" href="#") Postrojenje
             li (role="presentation")
               a (role="menuitem" tabindex="-1" href="#") Zaposlenici
-        li.main_menu_divider.hidden-xs
+        li.menu_divider.hidden-xs
           | /
-        li
-          a (href="#") PONUDA
-        li.main_menu_divider.hidden-xs
+        li.menu_item
+          = activate_link(@products_active, 'PONUDA', products_path)
+        li.menu_divider.hidden-xs
           | /
-        li
-          a (href="#") KONTAKT
+        li.menu_item
+          = activate_link(@contact_active, 'KONTAKT', contact_path)

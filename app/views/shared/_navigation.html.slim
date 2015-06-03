@@ -1,40 +1,43 @@
 nav.navbar.navbar-default
   .container
-    .navbar-header
-      // Hamburger icon on xs screens.
-      button.navbar-toggle.collapsed.mobile_button (type="button" data-toggle="collapse" data-target="#menu_content")
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      // Setting MT-ING logo.
-      a.navbar-brand (href="/home")
-        = image_tag('icons/mt-ing_icon.png', class: 'logo_img', alt: 'MT-ING')
+    .row
+      .col-sm-1.col-lg-offset-1
+        .navbar-header
+          // Hamburger icon on xs screens.
+          button.navbar-toggle.collapsed.mobile_button (type="button" data-toggle="collapse" data-target="#menu_content")
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          // Setting MT-ING logo.
+          a.navbar-brand (href="/home")
+            = image_tag('icons/mt-ing_icon.png', class: 'logo_img', alt: 'MT-ING')
 
-    // Main menu on the right side.
-    .collapse.navbar-collapse#menu_content
-      ul.nav.navbar-nav.navbar-right.main_list
-        li.menu_item
-          = activate_link(@home_active, 'NASLOVNICA', home_path)
-        li.menu_divider.hidden-xs
-          | /
-        li.menu_item.dropdown (role="presentation")
-          a.dropdown-toggle (href="#" data-toggle="dropdown" role="button" aria-expanded="false")
-            | O NAMA
-            span.caret
-          ul.dropdown-menu.dropdown-menu-left.sub_list (role="menu")
-            li (role="presentation")
-              a (role="menuitem" tabindex="-1" href="#") Povijest kompanije
-            li (role="presentation")
-              a (role="menuitem" tabindex="-1" href="#") Postrojenje
-            li (role="presentation")
-              a (role="menuitem" tabindex="-1" href="#") Zaposlenici
-        li.menu_divider.hidden-xs
-          | /
-        li.menu_item
-          = activate_link(@products_active, 'PONUDA', products_path)
-        li.menu_divider.hidden-xs
-          | /
-        li.menu_item
-          = activate_link(@contact_active, 'KONTAKT', contact_path)
+      // Main menu on the right side.
+      .col-sm-9.col-sm-offset-2.col-md-8.col-md-offset-3.col-lg-6.col-lg-offset-4
+        .collapse.navbar-collapse#menu_content
+          ul.nav.navbar-nav.navbar-right.main_list
+            li.menu_item
+              = activate_link(@home_active, 'NASLOVNICA', home_path)
+            li.menu_divider.hidden-xs
+              | /
+            li.menu_item.dropdown (role="presentation")
+              a.dropdown-toggle (href="#" data-toggle="dropdown" role="button" aria-expanded="false")
+                | O NAMA
+                span.caret
+              ul.dropdown-menu.dropdown-menu-left.sub_list (role="menu")
+                li (role="presentation")
+                  a (role="menuitem" tabindex="-1" href="#") Povijest kompanije
+                li (role="presentation")
+                  a (role="menuitem" tabindex="-1" href="#") Postrojenje
+                li (role="presentation")
+                  a (role="menuitem" tabindex="-1" href="#") Zaposlenici
+            li.menu_divider.hidden-xs
+              | /
+            li.menu_item
+              = activate_link(@products_active, 'PONUDA', products_path)
+            li.menu_divider.hidden-xs
+              | /
+            li.menu_item
+              = activate_link(@contact_active, 'KONTAKT', contact_path)

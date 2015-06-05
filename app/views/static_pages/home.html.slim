@@ -1,28 +1,37 @@
-#home_page_carousel.carousel.slide (data-ride="carousel")
-  ol.carousel-indicators
-    li.active (data-target="#home_page_carousel" data-slide-to="0")
-    li (data-target="#home_page_carousel" data-slide-to="1")
-    li (data-target="#home_page_carousel" data-slide-to="2")
+.homepage_wrapper
+  .sidebar_wrapper
+    aside.sidebar_md_lg.visible-md.visible-lg
+      .sidebar_item
+      .sidebar_item
+      .sidebar_item
+      .sidebar_item
+      .sidebar_item
+    aside.sidebar_xs_sm.visible-xs.visible-sm
+  #home_page_carousel.carousel.slide (data-ride="carousel")
+    ol.carousel-indicators
+      li.active (data-target="#home_page_carousel" data-slide-to="0")
+      li (data-target="#home_page_carousel" data-slide-to="1")
+      li (data-target="#home_page_carousel" data-slide-to="2")
 
-  .carousel-inner (role="listbox")
-    .item.active
-      = image_tag('home_page/home_page_default.jpg', alt: 'MT-ING staklo 1', height: 250, width: 1500)
-    .item
-      = image_tag('home_page/home_page_1.jpg', alt: 'MT-ING staklo 2', height: 250, width: 1500)
-    .item
-      = image_tag('home_page/home_page_2.jpg', alt: 'MT-ING staklo 3', height: 250, width: 1500)
+    .carousel-inner (role="listbox")
+      .item.active
+        = image_tag('home_page/home_page_default.jpg', alt: 'MT-ING staklo 1', height: 250, width: 1500)
+      .item
+        = image_tag('home_page/home_page_1.jpg', alt: 'MT-ING staklo 2', height: 250, width: 1500)
+      .item
+        = image_tag('home_page/home_page_2.jpg', alt: 'MT-ING staklo 3', height: 250, width: 1500)
 
-.container.container_bottom
-  .row
-    .col-xs-12.skewer
-  .row
-    .col-xs-12.col-sm-6.col-sm-offset-2.col-md-5.col-md-offset-2.col-lg-4.col-lg-offset-3
-      .home_bottom_content
-        h1 DOBRO DOŠLI!
-        div#green_line
-        p
-          | Naš stručni tim ponudit će vam najbolje rješenje za funkcionalno i 
-          | estetsko uređenje vaših stambenih, poslovnih i drugih objekata i 
-          | otvorenih prostora svih namjena.
-        p
-          strong Vaš MT-ING
+  .container.container_bottom
+    .row
+      .col-xs-12.skewer
+    .row
+      .col-xs-12.col-sm-6.col-sm-offset-2.col-md-5.col-md-offset-2.col-lg-4.col-lg-offset-3
+        .home_bottom_content
+          h1 DOBRO DOŠLI!
+          div#green_line
+          p
+            | Naš stručni tim ponudit će vam najbolje rješenje za funkcionalno i 
+            | estetsko uređenje vaših stambenih, poslovnih i drugih objekata i 
+            | otvorenih prostora svih namjena.
+          p
+            strong Vaš MT-ING

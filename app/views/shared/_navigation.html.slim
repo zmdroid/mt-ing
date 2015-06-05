@@ -23,16 +23,18 @@ nav.navbar.navbar-default
             li.menu_divider.hidden-xs
               | /
             li.menu_item.dropdown (role="presentation")
-              a.dropdown-toggle (href="#" data-toggle="dropdown" role="button" aria-expanded="false")
-                | O NAMA
-                span.caret
+              = activate_link(@about_active,'O NAMA', '#',
+                "data-toggle": 'dropdown', role: 'button', "aria-expanded": false)
               ul.dropdown-menu.dropdown-menu-left.sub_list (role="menu")
                 li (role="presentation")
-                  a (role="menuitem" tabindex="-1" href="#") Povijest kompanije
+                  = activate_link(@company_history_active, 'Povijest kompanije', about_company_history_path,
+                    role: 'menuitem', tabindex: '-1')
                 li (role="presentation")
-                  a (role="menuitem" tabindex="-1" href="#") Postrojenje
+                  = activate_link(@machinery_active, 'Postrojenje', about_machinery_path,
+                   role: 'menuitem', tabindex: '-1')
                 li (role="presentation")
-                  a (role="menuitem" tabindex="-1" href="#") Zaposlenici
+                  = activate_link(@employees_active, 'Zaposlenici', about_employees_path,
+                    role: 'menuitem', tabindex: '-1')
             li.menu_divider.hidden-xs
               | /
             li.menu_item

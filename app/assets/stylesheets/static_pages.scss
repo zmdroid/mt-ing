@@ -15,7 +15,7 @@
   margin-left: 40px;
 }
 
-// SIDEBAR
+// DYNAMIC SIDEBAR
 .sidebar_md_lg {
   position: absolute;
   top: 50px;
@@ -100,6 +100,32 @@
         text-align: right;
       }
     }
+  }
+}
+
+// STATIC SIDEBAR
+aside.sidebar_xs {
+  .static_item {
+    margin: 0px -15px;
+    padding: 25px;
+  }
+  .static_item h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+  }
+  .static_item:nth-child(0n+1) {
+    background-image: image-url("home_page/home_page_1.jpg");
+  }
+  .static_item:nth-child(0n+2) {
+    background-image: image-url("home_page/home_page_2.jpg");
+  }
+  .static_item:nth-child(0n+3) {
+    background-image: image-url("home_page/home_page_3.jpg");
+  }
+  .static_item:nth-child(0n+4) {
+    background-image: image-url("home_page/home_page_4.jpg");
   }
 }
 

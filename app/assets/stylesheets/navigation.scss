@@ -29,15 +29,20 @@ body {
 }
 
 /** (tablets etc.) **/
-@media (min-width: 451px) and (max-width: 768px) {
+@media (min-width: 451px) and (max-width: 767px) {
   .navbar-header {
-    height: 15%;
+    height: 14%;
   }
   #menu_content {
     margin: 20px -15px 0px -15px;
   }
 }
 
+@media (min-width: 768px) and (max-width: 769px) {
+  .navbar-header {
+    height: 16%;
+  }
+}
 /** XS **/
 @media (max-width: 768px) {
   /* Dropdown menu */

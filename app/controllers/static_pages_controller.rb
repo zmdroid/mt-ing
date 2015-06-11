@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   before_action :activate_about, only: [:company_history, :machinery, :employees]
+
   def home
     @home_active = true
   end

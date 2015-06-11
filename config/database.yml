@@ -6,7 +6,7 @@ default: &default
 development:
   <<: *default
   database: mt-ing_dev
-  username: root
+  username: dariodaic
   password:
 
 # Warning: The database defined as "test" will be erased and
@@ -15,7 +15,7 @@ development:
 test:
   <<: *default
   database: mt-ing_test
-  username: root
+  username: dariodaic
   password:
 
 production:

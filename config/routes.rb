@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'enquiries/create'
+
   root 'static_pages#home'
   get 'home',     to: 'static_pages#home'
   get 'about/company_history', to: 'static_pages#company_history'

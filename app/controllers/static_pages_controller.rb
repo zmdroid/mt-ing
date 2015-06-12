@@ -23,6 +23,7 @@ class StaticPagesController < ApplicationController
 
   def contact
     @contact_active = true
+    @enquiry = Enquiry.new
   end
 
   private

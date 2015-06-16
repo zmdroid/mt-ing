@@ -18,7 +18,8 @@
   margin-left: 40px;
 }
 
-.sidebar_md_lg {
+// Sidebar
+#sidebar_md_lg {
   position: absolute;
   top: 50px;
   right: 0px;
@@ -75,7 +76,6 @@
 
     .service_title {
       width: 200px;
-      background-image: image-url("home_page/girl_1.jpg");
 
       h2 {
         padding: 36px;
@@ -85,7 +85,7 @@
         text-align: center;
       }
 
-       #long_title {
+       #automatic_doors {
         padding: 25px;
       }
     }
@@ -106,30 +106,13 @@
   }
 }
 
-// Static sidebar
-aside.sidebar_xs_sm {
-  .static_item {
-    margin: 0px -15px;
-    padding: 25px;
-  }
-  .static_item h2 {
-    color: #fff;
-    text-align: center;
-    font-size: 25px;
-    font-weight: 400;
-  }
-  .static_item:nth-child(0n+1) {
-    background-image: image-url("home_page/home_page_1.jpg");
-  }
-  .static_item:nth-child(0n+2) {
-    background-image: image-url("home_page/home_page_2.jpg");
-  }
-  .static_item:nth-child(0n+3) {
-    background-image: image-url("home_page/home_page_3.jpg");
-  }
-  .static_item:nth-child(0n+4) {
-    background-image: image-url("home_page/home_page_4.jpg");
-  }
+#iron {  background-image: image-url("home_page/zeljezo.jpg"); }
+#glass { background-image: image-url("home_page/staklo.jpg"); }
+#inox { background-image: image-url("home_page/inox.jpg") }
+#aluminium { background-image: image-url("home_page/aluminij.jpg") }
+#automatic_doors {
+  padding: 25px;
+  background-image: image-url("home_page/automatska_vrata.jpg");
 }
 
 // Carousel
@@ -145,6 +128,10 @@ aside.sidebar_xs_sm {
 
   .carousel-inner {
     height: 500px;
+
+    img {
+      width: 100%;
+    }
   }
 }
 

@@ -23,7 +23,7 @@ $(document).ready(function() {
 
   $(function() {
     $("#datetime-picker").datetimepicker({
-      format: 'd/M/YYYY'
+      format: 'D/MM/YYYY'
     });
   });
 });

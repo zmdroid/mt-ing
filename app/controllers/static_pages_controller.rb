@@ -23,12 +23,13 @@ class StaticPagesController < ApplicationController
 
   def contact
     @contact_active = true
-    @enquiry = Enquiry.new
+    # @enquiry, @budget
+    contact_page_info
   end
 
   private
 
-    def activate_about
-      @about_active = true
-    end
+  def activate_about
+    @about_active = true
+  end
 end

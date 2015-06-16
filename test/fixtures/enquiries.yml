@@ -1,21 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  full_name: MyString
+  name: MyString
   email: MyString
   service_description: MyText
-  phone_number: MyString
-  private_person: false
-  company: false
+  phone: MyString
+  entity: MyString
   budget: 1
-  deadline: 1
+  deadline: MyString
 
 two:
-  full_name: MyString
+  name: MyString
   email: MyString
   service_description: MyText
-  phone_number: MyString
-  private_person: false
-  company: false
+  phone: MyString
+  entity: MyString
   budget: 1
-  deadline: 1
+  deadline: MyString

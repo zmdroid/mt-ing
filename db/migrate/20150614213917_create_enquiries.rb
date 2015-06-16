@@ -1,14 +1,13 @@
 class CreateEnquiries < ActiveRecord::Migration
   def change
     create_table :enquiries do |t|
-      t.string :enquirer_name
+      t.string :name
       t.string :email
-      t.text :description
-      t.string :phone_number
-      t.boolean :is_private_person?
-      t.boolean :is_company?
+      t.text :service_description
+      t.string :phone
+      t.string :entity
       t.integer :budget
-      t.integer :deadline
+      t.string :deadline
 
       t.timestamps null: false
     end

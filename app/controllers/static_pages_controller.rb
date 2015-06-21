@@ -21,12 +21,6 @@ class StaticPagesController < ApplicationController
     @products_active = true
   end
 
-  def contact
-    @contact_active = true
-    # @enquiry, @budget
-    contact_page_info
-  end
-
   private
 
   def activate_about

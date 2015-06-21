@@ -17,15 +17,17 @@ section.enquiry.col-xs-7
       br
 
       = f.label :email, "E-MAIL*"
+      = "<span class='input_error_text'>#{@invalid_email}</span>".html_safe if @invalid_email
       = f.text_field :email
       br
 
       = f.label :service_description, "OPIS POTREBNIH RADOVA"
-      span *
+      = "<span class='input_error_text'>#{@service_error}</span>".html_safe if @service_error
       = f.text_area :service_description
       br
 
       = f.label :phone, "BROJ TELEFONA"
+      = "<span class='input_error_text'>#{@phone_error}</span>".html_safe if @phone_error
       = f.text_field :phone
       br
 

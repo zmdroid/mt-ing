@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'about/machinery',       to: 'static_pages#machinery'
   get 'about/employees',       to: 'static_pages#employees'
   get 'products',              to: 'static_pages#products'
-  get 'contact',               to: 'static_pages#contact'
 
+  get 'contact',               to: 'enquiries#new'
   post 'enquiries/create'
 end

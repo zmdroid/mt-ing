@@ -1,18 +1,19 @@
 .container-fluid.contact_container
   .row
-    aside.company_message.col-xs-12.col-sm-5
+    aside.company_message.col-xs-12.col-sm-3.col-sm-offset-1.col-md-4.col-md-offset-1.col-lg-3.col-lg-offset-2
       .row
         section.main_message.col-xs-12
           h1 SLOBODNO NAS KONTAKTIRAJTE
           #green_bar
         section.col-xs-12
           .owner_photo_wrapper
+            = image_tag 'contact/skin.jpg', alt: 'Vjeko Tuta', width: 150, height: 150
         section.statement.col-xs-12
           #short_grey_divider
           p "Ovdje smo zbog Vas"
           #long_grey_divider
 
-    section.enquiry.col-xs-12.col-sm-7
+    section.enquiry.col-xs-12.col-sm-7.col-sm-offset-1.col-md-6.col-md-offset-1.col-lg-6.col-lg-offset-1
       .row
         .form_container.col-xs-12
           = form_for @enquiry, url: enquiries_create_path do |f|

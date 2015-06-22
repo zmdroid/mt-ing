@@ -1,9 +1,9 @@
 /************************
 ******* Home page *******
 *************************
-* 31  -> Sidebar        *
-* 128 -> Carousel       *
-* 148 -> Bottom content *
+* 26  -> Sidebar        *
+* 123 -> Carousel       *
+* 143 -> Bottom content *
 *************************/
 
 .homepage_container {
@@ -202,7 +202,82 @@ input, textarea, select {
   z-index: -1;
 }
 
-/* Aside */
-aside.company_message {
-  background-color: blue;
+/* Left section */
+.company_message {
+  height: 100%;
+  background-color: #293036;
+  h1, p {
+    color: #f5f5f5;
+    font-family: "OpenSans";
+  }
+  .main_message {
+    h1 {
+      width: 155px;
+      margin: auto;
+      margin-top: 140px;
+      font-size: 20px;
+      text-align: center;
+    }
+    #green_bar {
+      width: 70px;
+      margin: auto;
+      margin-top: 10px;
+      border: 4px solid #59cec6;
+    }
+  }
+
+  .owner_photo_wrapper {
+    margin: auto;
+    margin-top: 75px;
+    width: 150px;
+    img {
+      border: 10px solid #374048;
+      border-radius: 100%;
+    }
+  }
+
+  .statement {
+    #short_grey_divider,
+    #long_grey_divider {
+      border: 1px solid #374048;
+    }
+    #short_grey_divider {
+      width: 125px;
+      margin: auto;
+      margin-top: 75px;
+    }
+    p {
+      margin: 20px 0px;
+      text-align: center;
+      font-size: 15px;
+    }
+    #long_grey_divider {
+      width: 200px;
+      margin: auto;
+    }
+  }
+}
+
+/* Form */
+.enquiry {
+  height: 100%;
+  background-image: image-url("contact/form_background.jpg");
+}
+
+/** CONTACT **/
+/* iPhone 4,5 */
+@media (max-width: 324px) {
+  .company_message .main_message h1 { margin-top: 25px; }
+}
+/* iPhone 6, 6+ */
+@media (min-width: 325px) and (max-width: 450px) {
+  .company_message .main_message h1 { margin-top: 60px; }
+}
+/* SM */
+@media (min-width: 768px) and (max-width: 992px) {
+  .company_message .main_message h1 { margin-top: 50px; }
+}
+/* MD */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .company_message .main_message h1 { margin-top: 60px; }
 }

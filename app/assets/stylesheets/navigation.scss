@@ -7,8 +7,9 @@ body {
 ***********************************/
 /** (iPhone 4,5..) **/
 @media (max-width: 324px) {
+  /* Navigation */
   .navbar-header {
-    height: 8%;
+    height: 10%;
   }
   #menu_content {
     margin: 55px -15px 0px -15px;
@@ -29,7 +30,7 @@ body {
 }
 
 /** (tablets etc.) **/
-@media (min-width: 451px) and (max-width: 767px) {
+@media (min-width: 451px) and (max-width: 768px) {
   .navbar-header {
     height: 14%;
   }
@@ -38,11 +39,6 @@ body {
   }
 }
 
-@media (min-width: 768px) and (max-width: 769px) {
-  .navbar-header {
-    height: 16%;
-  }
-}
 /** XS **/
 @media (max-width: 768px) {
   /* Dropdown menu */

@@ -1,7 +1,7 @@
 nav.navbar.navbar-default
   .container
     .row
-      .col-sm-1.col-lg-offset-1
+      .col-sm-1.col-md-1.col-md-offset-1.col-lg-2.col-lg-offset-1
         .navbar-header
           // Hamburger icon on xs screens.
           button.navbar-toggle.collapsed.mobile_button (type="button" data-toggle="collapse" data-target="#menu_content")
@@ -12,10 +12,10 @@ nav.navbar.navbar-default
             span.icon-bar
           // Setting MT-ING logo.
           a.navbar-brand (href="/home")
-            = image_tag('icons/mt-ing_icon.png', class: 'logo_img', alt: 'MT-ING', size: "120x80")
+            = image_tag('icons/mt-ing_teal_icon.png', class: 'logo_img', alt: 'MT-ING', size: "120x80")
 
       // Main menu on the right side.
-      .col-sm-9.col-sm-offset-2.col-md-8.col-md-offset-3.col-lg-6.col-lg-offset-4
+      .col-sm-8.col-sm-offset-3.col-md-8.col-md-offset-2.col-lg-7.col-lg-offset-2
         .collapse.navbar-collapse#menu_content
           ul.nav.navbar-nav.navbar-right.main_list
             li.menu_item

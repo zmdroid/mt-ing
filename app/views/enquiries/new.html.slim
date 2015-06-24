@@ -18,43 +18,59 @@
         .form_container.col-xs-12
           = form_for @enquiry, url: enquiries_create_path do |f|
             .row
-              .col-xs-12.col-sm-6
-                = f.label :name, "IME I PREZIME*"
-                = f.text_field :name
-                br
+              .form_left_side.col-xs-12.col-lg-6
+                .general_input
+                  .required_field
+                    = f.label :name, "IME I PREZIME"
+                    span *
+                  = f.text_field :name, class: "text_input"
 
-                = f.label :email, "E-MAIL*"
-                = "<span class='input_error_text'>#{@invalid_email}</span>".html_safe if @invalid_email
-                = f.text_field :email
-                br
+                .general_input
+                  .required_field
+                    = f.label :email, "E-MAIL"
+                    span *
+                  - if @invalid_email
+                    = "<span class='input_error_text'>#{@invalid_email}</span>".html_safe
+                  = f.text_field :email, class: "text_input"
 
-                = f.label :service_description, "OPIS POTREBNIH RADOVA"
-                = "<span class='input_error_text'>#{@service_error}</span>".html_safe if @service_error
-                = f.text_area :service_description
-                br
+                .general_input
+                  .required_field
+                    = f.label :service_description, "OPIS RADOVA"
+                    span *
+                  - if @service_error
+                    = "<span class='input_error_text'>#{@service_error}</span>".html_safe
+                  = f.text_area :service_description
+                .general_input
+                  #required_notice
+                    | *Obvezna polja za popuniti
 
-              .col-xs-12.col-sm-6
-                = f.label :phone, "BROJ TELEFONA"
-                = "<span class='input_error_text'>#{@phone_error}</span>".html_safe if @phone_error
-                = f.text_field :phone
-                br
+              .form_right_side.col-xs-12.col-lg-6
+                .general_input
+                  p
+                    = f.label :phone, "BROJ TELEFONA"
+                  - if @phone_error
+                    = "<span class='input_error_text'>#{@phone_error}</span>".html_safe
+                  = f.text_field :phone, class: "text_input"
 
-                p FIZIČKA OSOBA / PODUZEĆE
-                = f.label :entity_company, "Poduzeće"
-                = f.radio_button :entity, "company"
-                = f.label :entity_person, "Fizička osoba"
-                = f.radio_button :entity, "person"
-                br
+                .general_input
+                  p FIZIČKA OSOBA / PODUZEĆE
+                  = f.label :entity_company, "Poduzeće"
+                  = f.radio_button :entity, "company"
+                  = f.label :entity_person, "Fizička osoba"
+                  = f.radio_button :entity, "person"
+                  br
 
-                = f.label :budget, "BUDŽET"
-                = f.select :budget, options_for_select(@budget, 1)
-                br
+                .general_input
+                  = f.label :budget, "BUDŽET"
+                  = f.select :budget, options_for_select(@budget, 1)
+                  br
 
-                .input-group.date#datetime-picker
-                  = f.label :deadline, "ROK IZRADE"
-                  = f.text_field :deadline
-                  span.input-group-addon
-                    span.glyphicon.glyphicon-calendar
-                br
-            .col-xs-12
-              = f.submit "POŠALJI"
+                .general_input
+                  .input-group.date#datetime-picker
+                    = f.label :deadline, "ROK IZRADE"
+                    = f.text_field :deadline, class: "text_input"
+                    span.input-group-addon
+                      span.glyphicon.glyphicon-calendar
+                  br
+              .col-xs-12
+                = f.submit "POŠALJI", id: "submit_button"

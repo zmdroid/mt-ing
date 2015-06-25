@@ -195,17 +195,10 @@
 input, textarea, select {
   color: #000;
 }
-
-/* Container */
-.contact_container {
-  height: 90%;
-  z-index: -1;
-}
-
-/* Left section */
+// ###################
 .company_message {
-  height: 100%;
-  background-color: #293036;
+  margin-top: 140px;
+
   h1, p {
     color: #f5f5f5;
     font-family: "OpenSans";
@@ -214,7 +207,6 @@ input, textarea, select {
     h1 {
       width: 155px;
       margin: auto;
-      margin-top: 140px;
       font-size: 20px;
       text-align: center;
     }
@@ -264,62 +256,90 @@ input, textarea, select {
   background-image: image-url("contact/form_background.jpg");
 }
 
-.form_container {
-  padding: 145px 75px 0px 75px;
-}
-
-.general_input {
-  margin: 15px 10px;
-
-  .required_field {
-    margin-bottom: 0px;
-    color: #4d8782;
-    font-size: 20px;
-
-    label{
-      color: #fff;
-      font-size: 14px;
-    }
-    span {
-      display: inline-block;
-      margin-left: 3px;
-    }
-  }
-  .text_input, textarea {
-    width: 200px;
-    height: 40px;
-    border: 1px solid #fff;
-    padding: 10px;
-    background-color: transparent;
-    color: #fff;
-  }
-  textarea {
-    height: 120px;
-  }
-  .text_input:focus, textarea:focus {
-    outline: none;
-    border: 1px solid #25c0d3;
-  }
-  #required_notice {
-    font-size: 10px;
-  }
-}
-
-#submit_button {
-   height: 35px;
-   width: 140px;
-   color: #fff;
-   background-color: #59cec6;
-   border: none;
-   padding: 0px;
-   margin: auto;
-   margin-top: 10px;
-   display: block;
- }
 /** CONTACT **/
 /* iPhone 4,5 */
 @media (max-width: 324px) {
+  body {
+    background-image: image-url("contact/form_background.jpg");
+  }
+  .enquiry {
+    height: 120%;
+    background: none;
+  }
   .company_message .main_message h1 { margin-top: 25px; }
+  .new_enquiry {
+    padding-top: 80px;
+  }
+  .input-tags, .input-group {
+    margin-left: 12%;
+    margin-bottom: 20px;
+  }
+  .input-label, .input-info {
+    font-family: "OpenSans-Light";
+  }
+  .input-tags {
+    .input-info {
+      width: 85%;
+      background-color: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 10px;
+    }
+    .input-info:focus {
+      outline: none;
+      border: 1px solid #25c0d3;
+    }
+    span {
+      position: relative;
+      display: block;
+    }
+    em {
+      position: relative;
+      top: 6px;
+      color: #4d8782;
+      font-size: 20px;
+    }
+    #enquiry_entity_company {
+      margin-left: 15.5%;
+    }
+    #enquiry_entity_person {
+      margin-left: 7%;
+    }
+    #enquiry_budget {
+      display: block;
+      height: 30px;
+      width: 85%;
+      border: 1px solid #fff;
+      border-radius: 0px;
+      background-color: transparent;
+      color: #fff;
+      outline: none;
+    }
+  }
+  .input-group {
+    label {
+      display: block;
+    }
+    input {
+      width: 75%;
+    }
+    .input-group-addon {
+      display: inline-block;
+      width: 40px;
+    }
+    .bottom {
+      top: 0px;
+    }
+    #enquiry_deadline {
+      height: 27px;
+    }
+  }
+  .submit-button {
+    display: block;
+    margin: 20px auto 20px;
+    padding: 8px;
+    width: 35%;
+  }
 }
 /* iPhone 6, 6+ */
 @media (min-width: 325px) and (max-width: 450px) {

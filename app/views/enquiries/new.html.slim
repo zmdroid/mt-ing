@@ -1,76 +1,66 @@
-.container-fluid.contact_container
+.container-fluid
   .row
-    aside.company_message.col-xs-12.col-sm-3.col-sm-offset-1.col-md-4.col-md-offset-1.col-lg-3.col-lg-offset-2
-      .row
-        section.main_message.col-xs-12
-          h1 SLOBODNO NAS KONTAKTIRAJTE
-          #green_bar
-        section.col-xs-12
-          .owner_photo_wrapper
-            = image_tag 'contact/skin.jpg', alt: 'Vjeko Tuta', width: 150, height: 150
-        section.statement.col-xs-12
-          #short_grey_divider
-          p "Ovdje smo zbog Vas"
-          #long_grey_divider
+    aside.company_message.hidden-xs.col-sm-3.col-sm-offset-1.col-md-4.col-md-offset-1.col-lg-3.col-lg-offset-2
+      section.main_message
+        h1 SLOBODNO NAS KONTAKTIRAJTE
+        #green_bar
+      section
+        .owner_photo_wrapper
+          = image_tag 'contact/skin.jpg', alt: 'Vjeko Tuta', width: 150, height: 150
+      section.statement
+        #short_grey_divider
+        p "Ovdje smo zbog Vas"
+        #long_grey_divider
 
-    section.enquiry.col-xs-12.col-sm-7.col-sm-offset-1.col-md-6.col-md-offset-1.col-lg-6.col-lg-offset-1
-      .row
-        .form_container.col-xs-12
-          = form_for @enquiry, url: enquiries_create_path do |f|
-            .row
-              .form_left_side.col-xs-12.col-lg-6
-                .general_input
-                  .required_field
-                    = f.label :name, "IME I PREZIME"
-                    span *
-                  = f.text_field :name, class: "text_input"
+    section.enquiry.col-xs-12.col-sm-8.col-md-7
+      = form_for @enquiry, url: enquiries_create_path do |f|
+        .row
+          .col-xs-12
+            .input-tags
+              span
+                = f.label :name, "IME I PREZIME", class: "input-label"
+                em  *
+              = f.text_field :name, class: "input-info"
 
-                .general_input
-                  .required_field
-                    = f.label :email, "E-MAIL"
-                    span *
-                  - if @invalid_email
-                    = "<span class='input_error_text'>#{@invalid_email}</span>".html_safe
-                  = f.text_field :email, class: "text_input"
+            .input-tags
+              span
+                = f.label :email, "E-MAIL", class: "input-label"
+                em  *
+              = f.text_field :email, class: "input-info"
+              = "<span class='input_error_text'>#{@invalid_email}</span>".html_safe if @invalid_email
 
-                .general_input
-                  .required_field
-                    = f.label :service_description, "OPIS RADOVA"
-                    span *
-                  - if @service_error
-                    = "<span class='input_error_text'>#{@service_error}</span>".html_safe
-                  = f.text_area :service_description
-                .general_input
-                  #required_notice
-                    | *Obvezna polja za popuniti
+            .input-tags
+              span
+                = f.label :service_description, "OPIS RADOVA", class: "input-label"
+                em  *
+              = f.text_area :service_description, class: "input-info", rows: 4
+              = "<span class='input_error_text'>#{@service_error}</span>".html_safe if @service_error
 
-              .form_right_side.col-xs-12.col-lg-6
-                .general_input
-                  p
-                    = f.label :phone, "BROJ TELEFONA"
-                  - if @phone_error
-                    = "<span class='input_error_text'>#{@phone_error}</span>".html_safe
-                  = f.text_field :phone, class: "text_input"
+          .col-xs-12
+            .input-tags
+              span
+                = f.label :phone, "BROJ TELEFONA", class: "input-label"
+              = f.text_field :phone, class: "input-info"
+              = "<span class='input_error_text'>#{@phone_error}</span>".html_safe if @phone_error
 
-                .general_input
-                  p FIZIČKA OSOBA / PODUZEĆE
-                  = f.label :entity_company, "Poduzeće"
-                  = f.radio_button :entity, "company"
-                  = f.label :entity_person, "Fizička osoba"
-                  = f.radio_button :entity, "person"
-                  br
+            .input-tags
+              .entity_radio_button
+                = f.label :entity_company, "Poduzeće", class: "input-label"
+                = f.radio_button :entity, "company"
+              .entity_radio_button
+                = f.label :entity_person, "Fizička osoba", class: "input-label"
+                = f.radio_button :entity, "person"
 
-                .general_input
-                  = f.label :budget, "BUDŽET"
-                  = f.select :budget, options_for_select(@budget, 1)
-                  br
+            .input-tags
+              span
+                = f.label :budget, "BUDŽET", class: "input-label"
+              = f.select :budget, options_for_select(@budget, 1), class: "input-info"
 
-                .general_input
-                  .input-group.date#datetime-picker
-                    = f.label :deadline, "ROK IZRADE"
-                    = f.text_field :deadline, class: "text_input"
-                    span.input-group-addon
-                      span.glyphicon.glyphicon-calendar
-                  br
-              .col-xs-12
-                = f.submit "POŠALJI", id: "submit_button"
+            .input-group
+              = f.label :deadline, "ROK IZRADE", class: "input-label"
+              = f.text_field :deadline, class: "input-info"
+              span.input-group-addon
+                span.glyphicon.glyphicon-calendar
+
+          .col-xs-12
+            = f.submit "POŠALJI", class: "submit-button"

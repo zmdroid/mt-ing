@@ -20,27 +20,28 @@
               span
                 = f.label :name, "IME I PREZIME", class: "input-label"
                 em  *
-              = f.text_field :name, class: "input-info"
+              = f.text_field :name, placeholder: "Marko Markić", class: "input-info"
+              = "<span class='input_error_text'>#{@invalid_name}</span>".html_safe if @invalid_name
 
             .input-tags
               span
                 = f.label :email, "E-MAIL", class: "input-label"
                 em  *
-              = f.text_field :email, class: "input-info"
+              = f.text_field :email, placeholder: "primjer@emaila.hr", class: "input-info"
               = "<span class='input_error_text'>#{@invalid_email}</span>".html_safe if @invalid_email
 
             .input-tags
               span
                 = f.label :service_description, "OPIS RADOVA", class: "input-label"
                 em  *
-              = f.text_area :service_description, class: "input-info", rows: 4
+              = f.text_area :service_description, placeholder: "Vaša poruka...", class: "input-info", rows: 4
               = "<span class='input_error_text'>#{@service_error}</span>".html_safe if @service_error
 
           .col-xs-12
             .input-tags
               span
                 = f.label :phone, "BROJ TELEFONA", class: "input-label"
-              = f.text_field :phone, class: "input-info"
+              = f.text_field :phone, placeholder: "090 111 222", class: "input-info"
               = "<span class='input_error_text'>#{@phone_error}</span>".html_safe if @phone_error
 
             .input-tags
@@ -56,11 +57,9 @@
                 = f.label :budget, "BUDŽET", class: "input-label"
               = f.select :budget, options_for_select(@budget, 1), class: "input-info"
 
-            .input-group
+            .input-tags
               = f.label :deadline, "ROK IZRADE", class: "input-label"
-              = f.text_field :deadline, class: "input-info"
-              span.input-group-addon
-                span.glyphicon.glyphicon-calendar
+              = f.text_field :deadline, placeholder: "npr. 12-12-2012", class: "input-info"
 
           .col-xs-12
             = f.submit "POŠALJI", class: "submit-button"

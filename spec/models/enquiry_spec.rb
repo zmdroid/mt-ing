@@ -83,4 +83,13 @@ describe Enquiry do
     )
     expect(enquiry.phone).to eq("1234567891")
   end
+  it 'is allowed to be nil' do
+    enquiry = Enquiry.create(
+      name: "Marko Markić",
+      email: "ivanm@gmail.com",
+      service_description: "X" * 40,
+    )
+    enquiry.valid?
+    expect(enquiry.errors.messages.keys).not_to include :phone
+  end
 end

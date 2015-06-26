@@ -256,6 +256,7 @@ input, textarea, select {
   background-image: image-url("contact/form_background.jpg");
 }
 
+
 /** CONTACT **/
 /* iPhone 4,5 */
 @media (max-width: 324px) {
@@ -268,7 +269,7 @@ input, textarea, select {
   }
   .company_message .main_message h1 { margin-top: 25px; }
   .new_enquiry {
-    padding-top: 80px;
+    padding-top: 55px;
   }
   .input-tags, .input-group {
     margin-left: 12%;
@@ -285,18 +286,32 @@ input, textarea, select {
       color: #fff;
       padding: 10px;
     }
-    .input-info:focus {
+    select {
+      display: block;
+      height: 42px;
+      width: 85%;
+      border: 1px solid #fff;
+      border-radius: 0px;
+      background-color: transparent;
+      color: #fff;
+      outline: none;
+    }
+    textarea {
+      resize: none;
+    }
+    .input-info:focus, select:focus {
       outline: none;
       border: 1px solid #25c0d3;
     }
-    span {
+    > span {
       position: relative;
       display: block;
     }
     em {
       position: relative;
-      top: 6px;
-      color: #4d8782;
+      top: 3px;
+      left: -3px;
+      color: #59cec6;
       font-size: 20px;
     }
     #enquiry_entity_company {
@@ -305,40 +320,43 @@ input, textarea, select {
     #enquiry_entity_person {
       margin-left: 7%;
     }
-    #enquiry_budget {
-      display: block;
-      height: 30px;
-      width: 85%;
-      border: 1px solid #fff;
-      border-radius: 0px;
-      background-color: transparent;
-      color: #fff;
-      outline: none;
+    .input_error_text {
+      color: red;
+      font-family: "OpenSans-Light";
     }
   }
   .input-group {
+    width: 85%;
     label {
       display: block;
     }
     input {
-      width: 75%;
-    }
-    .input-group-addon {
       display: inline-block;
-      width: 40px;
+      height: 42px;
+      padding: 10px;
+      border-radius: 0px;
+      border: 1px solid #fff;
+      background-color: transparent;
+      color: #fff;
     }
-    .bottom {
-      top: 0px;
+    input {
+      width: 100%;
     }
-    #enquiry_deadline {
-      height: 27px;
+    input:focus {
+      outline: none;
+      border-color: #25c0d3;
     }
   }
   .submit-button {
     display: block;
     margin: 20px auto 20px;
     padding: 8px;
-    width: 35%;
+    border: none;
+    width: 45%;
+    background-color: #59cec6;
+    color: #fff;
+    font-weight: normal;
+    letter-spacing: 1px;
   }
 }
 /* iPhone 6, 6+ */

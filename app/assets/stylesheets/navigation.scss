@@ -2,122 +2,16 @@ body {
   background-color: #293036;
 }
 
-/**********************************
-***        Media queries        ***
-***********************************/
-/** (iPhone 4,5..) **/
-@media (max-width: 324px) {
-  /* Navigation */
-  .navbar-header {
-    height: 10%;
-  }
-  #menu_content {
-    margin: 55px -15px 0px -15px;
-  }
-}
-
-/** (iPhone 6, 6+....) **/
-@media (min-width: 325px) and (max-width: 450px) {
-  .navbar-header {
-    height: 10%;
-  }
-  #menu_content {
-    margin: 40px -15px 0px -15px;
-   }
-   aside.sidebar_xs {
-     margin-top: -55px;
-   }
-}
-
-/** (tablets etc.) **/
-@media (min-width: 451px) and (max-width: 768px) {
-  .navbar-header {
-    height: 14%;
-  }
-  #menu_content {
-    margin: 20px -15px 0px -15px;
-  }
-}
-
-/** XS **/
-@media (max-width: 768px) {
-  /* Dropdown menu */
-  ul li a {
-    text-align: center;
-  }
-  .sub_list li {
-     padding-bottom: 5px;
-  }
-
-  /* Bottom content */
-  .home_bottom_content {
-    text-align: center;
-
-    #green_line {
-      margin: auto;
-    }
-    h1 {
-      margin-top: 0px;
-    }
-    p {
-      margin-top: 25px;
-    }
-    p:last-child {
-      margin-top: 15px;
-    }
-  }
-}
-
-/** SM-LG **/
-@media (min-width: 769px) {
-
-  #menu_content {
-    .main_list {
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-
-    .menu_item, .menu_divider {
-       position: relative;
-    }
-
-    .menu_item {
-      height: 50px;
-      font-size: 15px;
-      top: 5px;
-    }
-
-    .menu_divider {
-      color: #b7b8b9;
-      height: 60px;
-      top: -5px;
-      font-size: 50px;
-      font-weight: 100;
-    }
-
-    .sub_list {
-      margin: 0px;
-      margin-top: 20px;
-      border: none;
-      background-color: #293036;
-      box-shadow: none;
-    }
-  }
-
-  #green_line {
-     margin-left: -100px;
-  }
-}
-
 /***************************
 *** Navigation - General ***
 ****************************/
 .navbar.navbar-default {
   width: 100%;
-  background-color: #293036;
+  background-color: #23282b;
   border: none;
   border-radius: 0px;
   margin: 0px;
+  z-index: 2;
 
   .logo_img {
     margin-top: 10px;
@@ -178,5 +72,112 @@ body {
     span:last-child {
       margin-bottom: 13px;
     }
+  }
+}
+
+/**********************************
+***        Media queries        ***
+***********************************/
+/** (iPhone 4,5..) **/
+@media (max-width: 324px) {
+  /* Navigation */
+  .navbar-header {
+    height: 10%;
+  }
+  #menu_content {
+    margin: 55px -15px 0px -15px;
+  }
+}
+
+/** (iPhone 6, 6+....) **/
+@media (min-width: 325px) and (max-width: 450px) {
+  .navbar-header {
+    height: 10%;
+  }
+  #menu_content {
+    margin: 40px -15px 0px -15px;
+   }
+   aside.sidebar_xs {
+     margin-top: -55px;
+   }
+}
+
+/** (tablets etc.) **/
+@media (min-width: 451px) and (max-width: 767px) {
+  .navbar-header {
+    height: 14%;
+  }
+  #menu_content {
+    margin: 20px -15px 0px -15px;
+  }
+}
+
+/** XS **/
+@media (max-width: 768px) {
+  /* Dropdown menu */
+  ul li a {
+    text-align: center;
+  }
+  .sub_list li {
+     padding-bottom: 5px;
+  }
+
+  /* Bottom content */
+  .home_bottom_content {
+    text-align: center;
+
+    #green_line {
+      margin: auto;
+    }
+    h1 {
+      margin-top: 0px;
+    }
+    p {
+      margin-top: 25px;
+    }
+    p:last-child {
+      margin-top: 15px;
+    }
+  }
+}
+
+/** SM-LG **/
+@media (min-width: 768px) {
+
+  #menu_content {
+    .main_list {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .menu_item, .menu_divider {
+       position: relative;
+    }
+
+    .menu_item {
+      height: 50px;
+      font-size: 15px;
+      top: 5px;
+    }
+
+    .menu_divider {
+      color: #b7b8b9;
+      height: 60px;
+      top: -5px;
+      font-size: 50px;
+      font-weight: 100;
+    }
+
+    .sub_list {
+      margin: 0px;
+      margin-top: 25px;
+      border: none;
+      background-color: #23282b;
+      box-shadow: none;
+    }
+  }
+
+  #green_line {
+     margin-left: -100px;
   }
 }

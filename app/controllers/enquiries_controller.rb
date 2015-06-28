@@ -13,8 +13,9 @@ class EnquiriesController < ApplicationController
     else
       invalid_name = @enquiry.errors.messages[:name]
       @invalid_name = invalid_name.first if invalid_name
-      invalid_email = @enquiry.errors.messages[:email]
-      @invalid_email = invalid_email.size == 2 ? invalid_email.first : invalid_email.last
+      if invalid_email = @enquiry.errors.messages[:email]
+        @invalid_email = invalid_email.size == 2 ? invalid_email.first : invalid_email.last
+      end
       phone_error = @enquiry.errors.messages[:phone]
       @phone_error = phone_error.first if phone_error
       service_error = @enquiry.errors.messages[:service_description]

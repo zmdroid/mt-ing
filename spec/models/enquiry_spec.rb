@@ -1,11 +1,12 @@
 require 'rails_helper'
 
-describe Enquiry do
+RSpec.describe Enquiry, type: :model do
   # testing presence of a name, email and service description
   it "is invalid without a name, email and phone" do
     enquiry = Enquiry.new
     expect(enquiry).not_to be_valid
   end
+
   it "is valid with name, email and service description" do
     enquiry = Enquiry.new(
       name: "Marko Markić",
@@ -14,6 +15,7 @@ describe Enquiry do
     )
     expect(enquiry).to be_valid
   end
+
   it "is invalid without a name" do
     enquiry = Enquiry.new(
       email: "marko@gmail.com",
@@ -21,6 +23,7 @@ describe Enquiry do
     )
     expect(enquiry).not_to be_valid
   end
+
   it "is invalid without an email" do
     enquiry = Enquiry.new(
       name: "Marko Markić",
@@ -28,6 +31,7 @@ describe Enquiry do
     )
     expect(enquiry).not_to be_valid
   end
+
   it "is invalid without a service description" do
     enquiry = Enquiry.new(
       name: "Marko Markić",
@@ -56,6 +60,7 @@ describe Enquiry do
     )
     expect(enquiry).not_to be_valid
   end
+
   it "is invalid if it has more than ten numbers" do
     enquiry = Enquiry.new(
       name: "Marko Markić",
@@ -65,6 +70,7 @@ describe Enquiry do
     )
     expect(enquiry).not_to be_valid
   end
+
   it "is valid if it has ten numbers" do
     enquiry = Enquiry.new(
       name: "Marko Markić",
@@ -74,6 +80,7 @@ describe Enquiry do
     )
     expect(enquiry).to be_valid
   end
+
   it "is stripping space in a phone number prior to persisting it" do
     enquiry = Enquiry.create(
       name: "Marko Markić",
@@ -83,6 +90,7 @@ describe Enquiry do
     )
     expect(enquiry.phone).to eq("1234567891")
   end
+
   it 'is allowed to be nil' do
     enquiry = Enquiry.create(
       name: "Marko Markić",

@@ -187,21 +187,12 @@
 /*******************
 ****** CONTACT *****
 ********************/
-// temp style
-.new_enquiry {
-  color: #fff;
-}
-
-input, textarea, select {
-  color: #000;
-}
-// ###################
 .company_message {
   margin-top: 140px;
 
   h1, p {
     color: #f5f5f5;
-    font-family: "OpenSans";
+    font-family: "OpenSans-Light";
   }
   .main_message {
     h1 {
@@ -229,12 +220,11 @@ input, textarea, select {
   }
 
   .statement {
-    #short_grey_divider,
-    #long_grey_divider {
+    #short_grey_divider, #long_grey_divider {
       border: 1px solid #374048;
     }
     #short_grey_divider {
-      width: 125px;
+      width: 50%;
       margin: auto;
       margin-top: 75px;
     }
@@ -244,130 +234,236 @@ input, textarea, select {
       font-size: 15px;
     }
     #long_grey_divider {
-      width: 200px;
       margin: auto;
     }
   }
 }
 
-/* Form */
+/* FORM */
+/* All sizes */
 .enquiry {
   height: 100%;
+  margin-top: -100px;
+  padding-top: 100px;
+  z-index: 1;
   background-image: image-url("contact/form_background.jpg");
+  color: #fff;
 }
 
+.input-label,
+.input-info,
+.input_error_text,
+.input-tags select {
+  font-family: "OpenSans-Light";
+}
 
-/** CONTACT **/
-/* iPhone 4,5 */
-@media (max-width: 324px) {
+.input-tags {
+  margin-bottom: 10px;
+
+  .input-info {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 10px;
+    color: #fff;
+  }
+  > div {
+    position: relative;
+  }
+  em {
+    position: relative;
+    top: 3px;
+    left: -3px;
+    color: #59cec6;
+    font-size: 20px;
+  }
+  textarea {
+    resize: none;
+  }
+  .input-info:focus, select:focus {
+    outline: none;
+    border: 1px solid #25c0d3;
+  }
+  select {
+    height: 42px;
+    border: 1px solid #fff;
+    border-radius: 0px;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+  }
+}
+
+.submit-button {
+  display: block;
+  margin: 20px auto 20px;
+  padding: 8px;
+  border: none;
+  background-color: #59cec6;
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.input_error label, .input_error_text {
+  color: red;
+}
+
+.input_error_text {
+  display: block;
+}
+
+/* XS - Mobile */
+@media (max-width: 767px) {
   body {
     background-image: image-url("contact/form_background.jpg");
   }
   .enquiry {
     height: 120%;
-    background: none;
   }
-  .company_message .main_message h1 { margin-top: 25px; }
   .new_enquiry {
     padding-top: 55px;
   }
-  .input-tags, .input-group {
+
+  .input-tags {
     margin-left: 12%;
-    margin-bottom: 20px;
+
+    .input-info, select {
+      width: 85%;
+    }
+    .entity_radio_button .input-label {
+      margin-left: 2%;
+    }
   }
-  .input-label, .input-info {
-    font-family: "OpenSans-Light";
+
+  .submit-button {
+    width: 40%;
+  }
+}
+
+/* SM - Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  #long_grey_divider {
+    width: 95%;
+  }
+  .enquiry {
+    padding-top: 130px;
+  }
+  .company_message {
+    margin-top: 40px;
+  }
+  .right {
+    padding-top: 6px;
+
+    > div:nth-child(1) {
+      margin-bottom: 17px;
+    }
+    > div:nth-child(2) {
+      margin-bottom: 12px;
+    }
+    > div:nth-child(3) {
+      margin-bottom: 14px;
+    }
+    > div:nth-child(4) {
+      margin-bottom: 9px;
+    }
+  }
+}
+
+/* MD - Laptop */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .company_message {
+    margin-top: 120px;
+  }
+  .enquiry {
+    padding-top: 230px;
+  }
+  #long_grey_divider {
+    width: 70%;
+  }
+  .right {
+    padding-top: 6px;
+
+    > div:nth-child(1) {
+      margin-bottom: 17px;
+    }
+    > div:nth-child(2) {
+      margin-bottom: 12px;
+    }
+    > div:nth-child(3) {
+      margin-bottom: 14px;
+    }
+    > div:nth-child(4) {
+      margin-bottom: 9px;
+    }
   }
   .input-tags {
-    .input-info {
-      width: 85%;
-      background-color: transparent;
-      border: 1px solid #fff;
-      color: #fff;
-      padding: 10px;
-    }
-    select {
-      display: block;
-      height: 42px;
-      width: 85%;
-      border: 1px solid #fff;
-      border-radius: 0px;
-      background-color: transparent;
-      color: #fff;
-      outline: none;
-    }
-    textarea {
-      resize: none;
-    }
-    .input-info:focus, select:focus {
-      outline: none;
-      border: 1px solid #25c0d3;
-    }
-    > span {
-      position: relative;
-      display: block;
-    }
-    em {
-      position: relative;
-      top: 3px;
-      left: -3px;
-      color: #59cec6;
-      font-size: 20px;
-    }
-    #enquiry_entity_company {
-      margin-left: 15.5%;
-    }
-    #enquiry_entity_person {
-      margin-left: 7%;
-    }
-    .input_error_text {
-      color: red;
-      font-family: "OpenSans-Light";
-    }
-  }
-  .input-group {
-    width: 85%;
-    label {
-      display: block;
-    }
-    input {
-      display: inline-block;
-      height: 42px;
-      padding: 10px;
-      border-radius: 0px;
-      border: 1px solid #fff;
-      background-color: transparent;
-      color: #fff;
-    }
-    input {
+    width: 75%;
+
+    .input-info, textarea, select {
       width: 100%;
     }
-    input:focus {
-      outline: none;
-      border-color: #25c0d3;
+    .entity_radio_button label {
+      margin-left: 4%;
     }
   }
+  .input-sm-left {
+    float: right;
+    clear: right;
+  }
   .submit-button {
-    display: block;
-    margin: 20px auto 20px;
-    padding: 8px;
-    border: none;
-    width: 45%;
-    background-color: #59cec6;
-    color: #fff;
-    font-weight: normal;
-    letter-spacing: 1px;
+    width: 30%;
   }
 }
-/* iPhone 6, 6+ */
-@media (min-width: 325px) and (max-width: 450px) {
-  .company_message .main_message h1 { margin-top: 60px; }
+
+/* LG - Larger screens */
+@media (min-width: 1200px) {
+
+  .company_message {
+    margin-top: 150px;
+  }
+  .enquiry {
+    padding-top: 250px;
+  }
+  #long_grey_divider {
+    width: 70%;
+  }
+  .right {
+    padding-top: 6px;
+
+    > div:nth-child(1) {
+      margin-bottom: 26px;
+    }
+    > div:nth-child(2) {
+      margin-bottom: 21px;
+    }
+    > div:nth-child(3) {
+      margin-bottom: 25px;
+    }
+    > div:nth-child(4) {
+      margin-bottom: 25px;
+    }
+  }
+  .input-tags {
+    margin-bottom: 25px;
+  }
 }
-/* SM */
-@media (min-width: 768px) and (max-width: 992px) {
-  .company_message .main_message h1 { margin-top: 50px; }
-}
-/* MD */
-@media (min-width: 992px) and (max-width: 1200px) {
-  .company_message .main_message h1 { margin-top: 60px; }
+
+@media (min-width: 768px) {
+  .input-tags {
+    width: 75%;
+
+    .input-info, textarea, select {
+      width: 100%;
+    }
+    .entity_radio_button label {
+      margin-left: 4%;
+    }
+  }
+  .input-sm-left {
+    float: right;
+    clear: right;
+  }
+  .submit-button {
+    width: 30%;
+  }
 }

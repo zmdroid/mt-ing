@@ -5,7 +5,7 @@ class Enquiry < ActiveRecord::Base
     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i,
               message: "...mora biti ispravan." }
   validates :service_description,
-    length: { minimum: 40, message: "...mora sadržavati barem četrdeset znakova." }
+    length: { minimum: 40, message: "...mora sadržavati barem 40 znakova." }
   validates :phone,
     numericality: { message: "...mora sadržavati samo brojeve." },
     length: { maximum: 10, message: "...može imati najviše deset brojeva." },

@@ -13,6 +13,9 @@
         #long_grey_divider
 
     section.enquiry.col-xs-12.col-sm-7.col-sm-offset-1.col-md-7.col-md-offset-0
+      - if flash[:notice]
+        div
+          p.enquiry_notification = flash[:notice]
       = form_for @enquiry, url: enquiries_create_path do |f|
         .row
           .col-xs-12.col-sm-6
@@ -60,7 +63,7 @@
             .input-tags.input-sm-right
               = f.label :deadline, "ROK IZRADE", class: "input-label"
               br
-              = f.text_field :deadline, placeholder: "npr. 12-12-2012", class: "datepicker input-info"
+              = f.text_field :deadline, placeholder: "d/m/yyyy", class: "datepicker input-info"
 
           .col-xs-12
             = f.submit "POŠALJI", class: "submit-button"

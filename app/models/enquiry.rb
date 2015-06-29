@@ -14,10 +14,6 @@ class Enquiry < ActiveRecord::Base
   # CALLBACKS
   before_validation :strip_phone
 
-  def msgs
-    self.errors.messages
-  end
-
   private
 
   def strip_phone

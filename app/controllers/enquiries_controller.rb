@@ -7,8 +7,10 @@ class EnquiriesController < ApplicationController
 
   def create
     @enquiry = Enquiry.new(enquiry_params)
+
     if @enquiry.save
       EnquiryMailer.notify(@enquiry).deliver_now
+      flash[:notice] = "Vaš upit je uspješno zaprimljen!"
       redirect_to contact_path
     else
       invalid_name = @enquiry.errors.messages[:name]
@@ -39,7 +41,7 @@ class EnquiriesController < ApplicationController
       ["10 000", "10 000"],
       ["15 000", "15 000"],
       ["20 000", "20 000"],
-      ["više od 30 000.", "30 000"]
+      ["> 30 000", "30 000"]
     ]
   end
 end

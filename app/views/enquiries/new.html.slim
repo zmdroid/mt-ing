@@ -54,13 +54,13 @@
 
             .input-tags.input-sm-right
               div
-                = f.label :budget, "BUDŽET", class: "input-label"
+                = f.label :budget, "BUDŽET (kn)", class: "input-label"
               = f.select :budget, options_for_select(@budget, 1), class: "input-info"
 
             .input-tags.input-sm-right
               = f.label :deadline, "ROK IZRADE", class: "input-label"
               br
-              = f.text_field :deadline, placeholder: "npr. 12-12-2012", class: "input-info"
+              = f.text_field :deadline, placeholder: "npr. 12-12-2012", class: "datepicker input-info"
 
           .col-xs-12
             = f.submit "POŠALJI", class: "submit-button"

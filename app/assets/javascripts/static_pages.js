@@ -20,10 +20,4 @@ $(document).ready(function() {
        clickedItem.removeClass("closed").addClass("opened");
      }
   });
-
-  $(function() {
-    $("#datetime-picker").datetimepicker({
-      format: 'D/MM/YYYY'
-    });
-  });
 });

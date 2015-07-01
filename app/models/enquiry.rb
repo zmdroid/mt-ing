@@ -1,5 +1,5 @@
 class Enquiry < ActiveRecord::Base
-  # VALIDATIONS
+  # validations
   validates :name, :email, :service_description, presence: { message: "...je obvezna vrijednost." }
   validates :email,
     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i,
@@ -7,12 +7,23 @@ class Enquiry < ActiveRecord::Base
   validates :service_description,
     length: { minimum: 40, message: "...mora sadržavati barem 40 znakova." }
   validates :phone,
-    numericality: { message: "...mora sadržavati samo brojeve." },
+    numericality: { message: "...mora sadržavati brojeve." },
     length: { maximum: 10, message: "...može imati najviše deset brojeva." },
     allow_blank: true
 
-  # CALLBACKS
+  # custom validations
+  validate :deadline_must_be_in_the_future
+
+  # callbacks
   before_validation :strip_phone
+
+  def deadline_must_be_in_the_future
+    unless deadline.empty?
+      chosen_date = Date.parse(deadline)
+      today = Date.today
+      errors.add(:deadline, "...mora biti u budućnosti.") if chosen_date <= today
+    end
+  end
 
   private
 

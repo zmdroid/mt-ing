@@ -14,8 +14,10 @@
 
     section.enquiry.col-xs-12.col-sm-7.col-sm-offset-1.col-md-7.col-md-offset-0
       - if flash[:notice]
-        div
+        .enquiry-container
           p.enquiry_notification = flash[:notice]
+      - else
+        .enquiry-container
       = form_for @enquiry, url: enquiries_create_path do |f|
         .row
           .col-xs-12.col-sm-6
@@ -64,6 +66,8 @@
               = f.label :deadline, "ROK IZRADE", class: "input-label"
               br
               = f.text_field :deadline, placeholder: "d/m/yyyy", class: "datepicker input-info"
+              = "<span class='input_error_text'>#{@deadline_error}</span>".html_safe if @deadline_error
 
           .col-xs-12
             = f.submit "POŠALJI", class: "submit-button"
+      .form_clear

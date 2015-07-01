@@ -1,16 +1,18 @@
 $(document).ready(function() {
   date = new Date();
-  var today = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+  var tomorrow = (date.getDate() + 1) + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
   $('.datepicker').datepicker({
     "autoclose": true,
     "todayHighlight": true,
-    "startDate": today,
+    "startDate": tomorrow,
     "format": "d/m/yyyy"
   });
 
   $('.enquiry_notification')
     .hide()
-    .slideDown(1250, function() {})
+    .slideDown(850, function() {})
     .delay(1500)
-    .slideUp(1250, function() {});
+    .slideUp(850, function() {});
+
+  $('.input_error_text').hide().slideDown(1000, function() {});
 });

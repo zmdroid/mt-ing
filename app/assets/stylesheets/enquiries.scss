@@ -59,12 +59,17 @@
   background-color: #59cec6;
 }
 
+// notification
+.enquiry-container {
+  height: 50px;
+  margin-top: 25px;
+}
+
 .enquiry_notification {
   width: 250px;
   margin: auto;
   margin-bottom: 10px;
   border: 1px solid #29cec6;
-  border-radius: 3px;
   padding: 5px 10px;
   color: #29cec6;
   font-size: 1.1em;
@@ -126,7 +131,7 @@
 
 .submit-button {
   display: block;
-  margin: 20px auto 20px;
+  margin: 20px auto 0px;
   padding: 8px;
   border: none;
   background-color: #59cec6;
@@ -151,10 +156,6 @@
   .enquiry {
     height: 120%;
   }
-  .new_enquiry {
-    padding-top: 55px;
-  }
-
   .input-tags {
     margin-left: 12%;
 
@@ -173,11 +174,15 @@
 
 /* SM - Tablet */
 @media (min-width: 768px) and (max-width: 991px) {
+  .enquiry-container {
+    height: 35px;
+    margin-top: 15px;
+  }
   #long_grey_divider {
     width: 95%;
   }
   .enquiry {
-    padding-top: 130px;
+    padding-top: 100px;
   }
   .company_message {
     margin-top: 40px;
@@ -206,7 +211,7 @@
     margin-top: 120px;
   }
   .enquiry {
-    padding-top: 230px;
+    padding-top: 180px;
   }
   #long_grey_divider {
     width: 70%;
@@ -253,7 +258,7 @@
     margin-top: 150px;
   }
   .enquiry {
-    padding-top: 250px;
+    padding-top: 180px;
   }
   #long_grey_divider {
     width: 70%;

@@ -22,6 +22,8 @@ class EnquiriesController < ApplicationController
       @phone_error = phone_error.first if phone_error
       service_error = @enquiry.errors.messages[:service_description]
       @service_error = service_error.first if service_error
+      deadline_error = @enquiry.errors.messages[:deadline]
+      @deadline_error = deadline_error.first if deadline_error
       render 'new'
     end
   end

@@ -5,6 +5,10 @@ body {
 /***************************
 *** Navigation - General ***
 ****************************/
+#about-us {
+  display: inline-block;
+}
+
 .navbar.navbar-default {
   width: 100%;
   background-color: #23282b;
@@ -19,7 +23,10 @@ body {
   }
 
   .caret {
-    margin-left: 5px;
+    display: inline-block;
+    color: #b7b89b;
+    margin-left: -8px;
+    margin-right: 8px;
   }
 
   #menu_content {

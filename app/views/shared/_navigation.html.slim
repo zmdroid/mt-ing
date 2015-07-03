@@ -23,8 +23,9 @@ nav.navbar.navbar-default
             li.menu_divider.hidden-xs
               | /
             li.menu_item.dropdown (role="presentation")
-              = activate_link(@about_active,'O NAMA', '#',
+              = activate_link(@about_active,'O NAMA', '#', id: "about-us",
                 "data-toggle": 'dropdown', role: 'button', "aria-expanded": false)
+              span.caret
               ul.dropdown-menu.dropdown-menu-left.sub_list (role="menu")
                 li (role="presentation")
                   = activate_link(@company_history_active, 'Povijest kompanije', about_company_history_path,

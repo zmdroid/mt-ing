@@ -106,13 +106,13 @@
   }
 }
 
-#iron {  background-image: image-url("home_page/zeljezo.jpg"); }
-#glass { background-image: image-url("home_page/staklo.jpg"); }
-#inox { background-image: image-url("home_page/inox.jpg") }
-#aluminium { background-image: image-url("home_page/aluminij.jpg") }
+#iron {  background-image: image-url("home_page/sidebar/zeljezo.jpg"); }
+#glass { background-image: image-url("home_page/sidebar/staklo.jpg"); }
+#inox { background-image: image-url("home_page/sidebar/inox.jpg") }
+#aluminium { background-image: image-url("home_page/sidebar/aluminij.jpg") }
 #automatic_doors {
   padding: 25px;
-  background-image: image-url("home_page/automatska_vrata.jpg");
+  background-image: image-url("home_page/sidebar/automatska_vrata.jpg");
 }
 
 /* Carousel */

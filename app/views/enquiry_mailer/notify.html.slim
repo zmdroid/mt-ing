@@ -1,6 +1,51 @@
-ul
+p Postovani,
+p
+ | novi upit je zaprimljen 
+ strong
+   = @format_date
+ |  sati.
+p Sadrzaj upita je sljedeci:
+ol
   li
-    strong = @enquiry.name
-  li = @enquiry.email
-  li = @enquiry.service_description
-  li = @enquiry.phone
+    p
+      strong Puno ime
+      br
+      = @enquiry.name
+  li
+    p
+      strong E-mail
+      br
+      = @enquiry.email
+  li
+    p
+      strong Opis radova
+      br
+      = @enquiry.service_description
+  - unless @enquiry.phone.empty?
+      li
+        p
+          strong Broj telefona
+          br
+          = @enquiry.phone
+  - if @enquiry.entity
+      li
+        p
+          strong Entitet
+          br
+          - if @enquiry.entity == "person"
+            | Fizicka osoba
+          - else
+            | Poduzece
+  - if @enquiry.budget
+      li
+        p
+          strong Budzet
+          br
+          = @enquiry.budget
+          |  kuna
+  - unless @enquiry.deadline.empty?
+    li
+      p
+        strong Rok izrade
+        br
+        = @enquiry.deadline

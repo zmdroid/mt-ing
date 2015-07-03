@@ -77,7 +77,7 @@
 }
 
 .enquiry {
-  height: 100%;
+  min-height: 100%;
   margin-top: -100px;
   padding-top: 100px;
   z-index: 1;
@@ -152,9 +152,6 @@
 @media (max-width: 767px) {
   body {
     background-image: image-url("contact/form_background.jpg");
-  }
-  .enquiry {
-    height: 120%;
   }
   .input-tags {
     margin-left: 12%;
@@ -253,12 +250,11 @@
 
 /* LG - Larger screens */
 @media (min-width: 1200px) {
-
   .company_message {
-    margin-top: 150px;
+    margin-top: 90px;
   }
   .enquiry {
-    padding-top: 180px;
+    padding-top: 120px;
   }
   #long_grey_divider {
     width: 70%;
@@ -281,6 +277,16 @@
   }
   .input-tags {
     margin-bottom: 25px;
+  }
+}
+
+/* custom large screen > 1300 */
+@media (min-width: 1300px) {
+  .company_message {
+    margin-top: 150px;
+  }
+  .enquiry {
+    padding-top: 180px;
   }
 }
 

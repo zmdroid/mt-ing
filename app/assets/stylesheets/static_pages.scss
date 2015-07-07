@@ -2,9 +2,6 @@
 ****** Homepage *****
 *********************/
 .homepage_container {
-  height: 100%;
-  margin-top: -100px;
-  padding-top: 100px;
   position: relative;
 }
 
@@ -60,7 +57,6 @@
   top: 50px;
   right: 0px;
   height: 515px;
-  margin-top: 100px;
   width: 450px;
   z-index: 1;
   overflow: hidden;
@@ -162,7 +158,7 @@
 /* Carousel */
 #home_page_carousel {
   width: 100%;
-  height: 55%;
+  height: 45%;
 
   .carousel-indicators {
     margin-bottom: 75px;
@@ -228,27 +224,27 @@
 **** Products/Ponuda ****
 *************************/
 .products-container,
-.products-dark-bg-top,
+.products-bg-top,
 .products-dark-bg-bottom {
   padding: 0px;
 }
 
 .products-container {
   background-image: image-url("products/background.jpg");
-  height: 100%;
+  min-height: 100%;
   margin-top: -100px;
 }
 
-.products-dark-bg-top {
-  min-height: 30%;
-}
-
-.products-dark-bg-bottom {
-  background-color: rgba(0, 0, 0, 0.5);
+.products-bg-top {
+  height: 30%;
 }
 
 .products-dark-bg-bottom {
   min-height: 70%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.products-dark-bg-bottom {
 
   #products-heading {
     width: 150px;
@@ -274,6 +270,7 @@
   width: 60%;
   margin: auto;
   margin-top: 70px;
+  margin-bottom: 70px;
 
   #products-accordion {
     margin-bottom: 0px;

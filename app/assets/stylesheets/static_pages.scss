@@ -1,5 +1,5 @@
 /********************
-****** HOMEPAGE *****
+****** Homepage *****
 *********************/
 .homepage_container {
   position: relative;
@@ -146,7 +146,7 @@
   }
 }
 
-#iron {  background-image: image-url("home_page/sidebar/zeljezo.jpg"); }
+#iron { background-image: image-url("home_page/sidebar/zeljezo.jpg"); }
 #glass { background-image: image-url("home_page/sidebar/staklo.jpg"); }
 #inox { background-image: image-url("home_page/sidebar/inox.jpg") }
 #aluminium { background-image: image-url("home_page/sidebar/aluminij.jpg") }
@@ -216,5 +216,102 @@
 
   strong {
     color: #777a7d;
+  }
+}
+
+
+/************************
+**** Products/Ponuda ****
+*************************/
+.products-container,
+.products-dark-bg-top,
+.products-dark-bg-bottom {
+  padding: 0px;
+}
+
+.products-container {
+  background-image: image-url("products/background.jpg");
+  min-height: 100%;
+  margin-top: -100px;
+}
+
+.products-dark-bg-top {
+  min-height: 30%;
+}
+
+.products-dark-bg-bottom {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.products-dark-bg-bottom {
+  min-height: 70%;
+
+  #products-heading {
+    width: 150px;
+    margin: auto;
+    background-color: #38444f;
+    transform: skewX(-20deg);
+
+    h1 {
+      margin: 0px;
+      padding: 5px;
+      margin-top: -14.5px;
+      color: #b7b8b9;
+      font-size: 22px;
+      font-family: "OpenSans-Light";
+      text-align: center;
+      transform: skewX(20deg);
+    }
+  }
+}
+
+// Accordion
+.products-accordion-container {
+  width: 60%;
+  margin: auto;
+  margin-top: 70px;
+
+  #products-accordion {
+    margin-bottom: 0px;
+  }
+  .products-group {
+    border: none;
+    border-radius: 0px;
+    border-shadow: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .products-title {
+    padding: 0px;
+    background-color: #27333a;
+    border-radius: 0px;
+
+    a {
+      color: #275c67;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #59cec6;
+    }
+    h2 {
+      padding: 10px;
+      font-size: 20px;
+      font-weight: 900;
+      font-family: "OpenSans-Light";
+      text-align: center;
+    }
+  }
+  .products-item {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    border: 0px;
+    padding: 3px 0px;
+    background-color: rgba(0,0,0,0.3);
+    color: #b7b8b9;
+  }
+  .panel-group .panel-heading + .panel-collapse > .panel-body {
+    border: none;
+    padding: 0px;
   }
 }

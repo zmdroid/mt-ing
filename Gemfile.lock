@@ -199,6 +199,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   better_errors (~> 2.1.1)
   binding_of_caller
   bootstrap-datepicker-rails
@@ -219,3 +220,6 @@ DEPENDENCIES
   slim-rails (~> 3.0.1)
   spring (~> 1.3.5)
   uglifier (>= 1.3.0)
+
+BUNDLED WITH
+   1.10.5

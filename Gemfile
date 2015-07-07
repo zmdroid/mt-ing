@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'bootstrap-datepicker-rails'
 gem 'slim-rails', '~> 3.0.1'
+gem 'autoprefixer-rails'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.1.0'

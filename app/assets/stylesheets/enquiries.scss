@@ -78,8 +78,6 @@
 
 .enquiry {
   height: 100%;
-  margin-top: -100px;
-  padding-top: 100px;
   z-index: 1;
   background-image: image-url("contact/form_background.jpg");
   color: #fff;
@@ -178,9 +176,6 @@
   #long_grey_divider {
     width: 95%;
   }
-  .enquiry {
-    padding-top: 100px;
-  }
   .company_message {
     margin-top: 40px;
   }
@@ -208,7 +203,7 @@
     margin-top: 120px;
   }
   .enquiry {
-    padding-top: 180px;
+    padding-top: 80px;
   }
   #long_grey_divider {
     width: 70%;
@@ -254,7 +249,7 @@
     margin-top: 90px;
   }
   .enquiry {
-    padding-top: 120px;
+    padding-top: 20px;
   }
   #long_grey_divider {
     width: 70%;
@@ -286,7 +281,7 @@
     margin-top: 150px;
   }
   .enquiry {
-    padding-top: 180px;
+    padding-top: 80px;
   }
 }
 

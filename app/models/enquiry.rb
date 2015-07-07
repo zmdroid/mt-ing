@@ -18,7 +18,7 @@ class Enquiry < ActiveRecord::Base
   before_validation :strip_phone
 
   def deadline_must_be_in_the_future
-    unless deadline.empty?
+    if deadline && deadline.empty?
       chosen_date = Date.parse(deadline)
       today = Date.today
       errors.add(:deadline, "...mora biti u budućnosti.") if chosen_date <= today

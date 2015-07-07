@@ -231,31 +231,33 @@
 
 .products-container {
   background-image: image-url("products/background.jpg");
-  min-height: 100%;
-  margin-top: -100px;
-}
-
-.products-bg-top {
-  height: 30%;
+  background-size: cover;
 }
 
 .products-dark-bg-bottom {
   min-height: 70%;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .products-dark-bg-bottom {
+  min-height: 100%;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  background-image: -moz-linear-gradient(transparent 0, transparent 100px, rgba(0, 0, 0, 0.5) 100px);
+  background-image: -webkit-linear-gradient(transparent 0, transparent 100px, rgba(0, 0, 0, 0.5) 100px);
+  background-image: -o-linear-gradient(transparent 0, transparent 100px, rgba(0, 0, 0, 0.5) 100px);
+  background-image: -ms-linear-gradient(transparent 0, transparent 100px, rgba(0, 0, 0, 0.5) 100px);
+  background-image: linear-gradient(transparent 0, transparent 100px, rgba(0, 0, 0, 0.5) 100px);
 
   #products-heading {
     width: 150px;
     margin: auto;
+    margin-bottom: 50px;
     background-color: #38444f;
     transform: skewX(-20deg);
 
     h1 {
       margin: 0px;
       padding: 5px;
-      margin-top: -14.5px;
       color: #b7b8b9;
       font-size: 22px;
       font-family: "OpenSans-Light";

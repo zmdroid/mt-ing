@@ -78,6 +78,8 @@
 
 .enquiry {
   height: 100%;
+  margin-top: -100px;
+  padding-top: 100px;
   z-index: 1;
   background-image: image-url("contact/form_background.jpg");
   color: #fff;
@@ -203,7 +205,7 @@
     margin-top: 120px;
   }
   .enquiry {
-    padding-top: 80px;
+    padding-top: 180px;
   }
   #long_grey_divider {
     width: 70%;
@@ -249,7 +251,7 @@
     margin-top: 90px;
   }
   .enquiry {
-    padding-top: 20px;
+    padding-top: 120px;
   }
   #long_grey_divider {
     width: 70%;
@@ -281,7 +283,7 @@
     margin-top: 150px;
   }
   .enquiry {
-    padding-top: 80px;
+    padding-top: 180px;
   }
 }
 

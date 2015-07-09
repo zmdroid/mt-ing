@@ -1,14 +1,26 @@
 <!-- ALUMINIUM modals -->
-.modal.fade#aluminium-alpha (tabindex="-1" role="dialog" aria-labelledby="al-alpha")
+<!-- Windows and doors -->
+.modal.fade#windows_and_doors (tabindex="-1" role="dialog" aria-labelledby="w_a_d")
   .modal-dialog (role="document")
     .modal-content
-      .modal-header
-        button.close (type="button" data-dismiss="modal" aria-label="Close")
-          span (aria-hidden="true") &times;
-        h4.modal-title#al-alpha Aluminium
-      .modal-body Aluminium alpha text
-      .modal-footer
-        button (type="button" data-dismiss="modal") Close
+      .modal-body
+        .container-fluid
+          .row
+            .col-xs-11.col-xs-offset-1.col-sm-4.col-sm-offset-2
+              .modal-text-section
+                h2 Prozori i stakla
+                button.close (type="button" data-dismiss="modal" aria-label="Close")
+                  span (aria-hidden="true") X
+                .modal-heading-underline
+                p
+                 | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
+                 | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
+                 | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
+            .col-xs-10.col-xs-offset-2.col-sm-6.col-sm-offset-0
+              .modal-pictures
+                = image_tag('products/img-200x200.png', alt: 'staklo', class: "upper-left-pic")
+                = image_tag('products/img-200x200.png', alt: 'staklo', class: "lower-left-pic hidden-xs")
+
 .modal.fade#aluminium-beta (tabindex="-1" role="dialog" aria-labelledby="al-beta")
   .modal-dialog (role="document")
     .modal-content
@@ -19,6 +31,16 @@
       .modal-body Aluminium beta text
       .modal-footer
         button (type="button" data-dismiss="modal") Close
+
+
+
+
+
+
+
+
+
+
 
 <!-- GLASS modals -->
 .modal.fade#glass-alpha (tabindex="-1" role="dialog" aria-labelledby="gl-alpha")

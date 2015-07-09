@@ -225,6 +225,7 @@
 *************************/
 .picture-bg {
   min-height: 100%;
+  margin-top: -100px;
   background-image: image-url("products/background.jpg");
 }
 
@@ -232,7 +233,7 @@
 .products-accordion-container {
   width: 60%;
   margin: auto;
-  margin-top: 70px;
+  margin-top: 170px;
   margin-bottom: 70px;
 
   #products-accordion {
@@ -278,4 +279,74 @@
     border: none;
     padding: 0px;
   }
+}
+
+// Modals
+
+.modal-dialog {
+  width: 100%;
+  margin: 0px;
+}
+.modal-content {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  height: 440px;
+  border: 0px;
+  border-radius: 0px;
+  background-color: #27333a;
+}
+.modal-body {
+  padding: 0px;
+}
+.modal-pictures img {
+  margin: 10px;
+}
+.modal-text-section {
+  h2 {
+    color: #fff;
+    font-family: "OpenSans-Light";
+  }
+  .modal-heading-underline {
+    background-color: teal;
+  }
+  p {
+    color: #fff;
+    text-align: justify;
+  }
+}
+
+/* XS - Mobile */
+@media (max-width: 767px) {
+  .modal-content { height: 450px; }
+  .modal-text-section {
+    .modal-heading-underline {
+      height: 5px;
+      width: 80px;
+    }
+    p {
+      margin: 20px 0px;
+    }
+    span {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-size: 40px;
+      font-weight: lighter;
+      color: #fff;
+      font-family: "OpenSans-Light";
+    }
+  }
+}
+
+/* SM - Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* MD - Laptop */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* LG - Larger screens */
+@media (min-width: 1200px) {
 }

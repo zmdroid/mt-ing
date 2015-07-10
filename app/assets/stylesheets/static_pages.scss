@@ -252,7 +252,7 @@
     border-radius: 0px;
 
     a {
-      color: #275c67;
+      color: #2A968E;
       text-decoration: none;
     }
     a:hover {
@@ -319,6 +319,7 @@
 /* XS - Mobile */
 @media (max-width: 767px) {
   .modal-content { height: 450px; }
+
   .modal-text-section {
     .modal-heading-underline {
       height: 5px;
@@ -335,6 +336,12 @@
       font-weight: lighter;
       color: #fff;
       font-family: "OpenSans-Light";
+    }
+  }
+  .modal-pictures {
+    img {
+      display: block;
+      margin: 10px auto;
     }
   }
 }

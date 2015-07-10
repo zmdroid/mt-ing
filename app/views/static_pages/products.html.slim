@@ -1,4 +1,7 @@
-= render "products_modals"
+= render "partials/modals/aluminium"
+= render "partials/modals/glass"
+= render "partials/modals/inox"
+= render "partials/modals/automatic_doors"
 
 <!-- Products page -->
 .container-fluid.picture-bg
@@ -6,67 +9,69 @@
     .products-accordion-container
       .panel-group#products-accordion (role="tablist" aria-multiselectable="true")
 
-        <!-- Aluminium accordion panel -->
+        <!-- Aluminium accordion -->
         .panel.panel-default.products-group
           .panel-heading.products-title#accord-aluminium (role="tab")
-            a (role="button" data-toggle="collapse" data-parent="#products-accordion" href="#accordion-first" aria-expanded="true" aria-controls="accordion-first")
+            a (role="button" data-toggle="collapse" data-parent="#products-accordion" href="#first-accordion" aria-expanded="true" aria-controls="first-accordion")
               h2.panel-title ALUMINIJSKA STOLARIJA
-          .panel-collapse.collapse.in#accordion-first (role="tabpanel" aria-labelledby="accord-aluminium")
+          .panel-collapse.collapse.in#first-accordion (role="tabpanel" aria-labelledby="accord-aluminium")
             .panel-body.products-body
-              button.products-item (type="button" data-toggle="modal" data-target="#windows_and_doors") Prozori i vrata
-              button.products-item (type="button" data-toggle="modal" data-target="#aluminium-beta") Klizne stijene
-              button.products-item (type="button" data-toggle="modal" data-target="#aluminium-beta") Zatvaranje balkona i loda
-              button.products-item (type="button" data-toggle="modal" data-target="#aluminium-beta") Zimski vrtovi
-              button.products-item (type="button" data-toggle="modal" data-target="#aluminium-beta") Fasadne stijene
-              button.products-item (type="button" data-toggle="modal" data-target="#aluminium-beta") Grilje
-              button.products-item (type="button" data-toggle="modal" data-target="#aluminium-beta") Zaluzine, venecijaneri i komarinci
-              button.products-item (type="button" data-toggle="modal" data-target="#aluminium-beta") Sve vrste unutranjih i vanjskih stijena
+              button.products-item (type="button" data-toggle="modal" data-target="#windows-and-doors") Prozori i vrata
+              button.products-item (type="button" data-toggle="modal" data-target="#sliding-doors") Klizne stijene
+              button.products-item (type="button" data-toggle="modal" data-target="#closing-balcons") Zatvaranje balkona i lođa
+              button.products-item (type="button" data-toggle="modal" data-target="#winter-gardens") Zimski vrtovi
+              button.products-item (type="button" data-toggle="modal" data-target="#outter-layout") Fasadne stijene
+              button.products-item (type="button" data-toggle="modal" data-target="#grills") Grilje
+              button.products-item (type="button" data-toggle="modal" data-target="#window-covers") Žaluzine, venecijaneri i komarinci
+              button.products-item (type="button" data-toggle="modal" data-target="#wall-covers") Unutarnje i vanjske stijene
 
-        <!-- Glass accordion panel -->
+        <!-- Glass accordion -->
         .panel.panel-default.products-group
           .panel-heading.products-title#accord-glass (role="tab")
-            a (role="button" data-toggle="collapse" data-parent="#products-accordion" href="#accordion-second" aria-expanded="false" aria-controls="accordion-second")
+            a (role="button" data-toggle="collapse" data-parent="#products-accordion" href="#second-accordion" aria-expanded="false" aria-controls="second-accordion")
               h2.panel-title STAKLARSKI RADOVI
-          .panel-collapse.collapse#accordion-second (role="tabpanel" aria-labelledby="accord-glass")
+          .panel-collapse.collapse#second-accordion (role="tabpanel" aria-labelledby="accord-glass")
             .panel-body.products-body
-              button.products-item (type="button" data-toggle="modal" data-target="#glass-alpha")
-               | Sve vrste stakala (IZO, ogledala, zicana...)
-              button.products-item (type="button" data-toggle="modal" data-target="#glass-beta")
-               | Staklene fiksna i klizne stijene
-              button.products-item (type="button" data-toggle="modal" data-target="#glass-beta") Staklena vrata
-              button.products-item (type="button" data-toggle="modal" data-target="#glass-beta") Tus kabine
-              button.products-item (type="button" data-toggle="modal" data-target="#glass-beta")
+              button.products-item (type="button" data-toggle="modal" data-target="#all-glass-types")
+               | Sve vrste stakala (IZO, ogledala, zičana...)
+              button.products-item (type="button" data-toggle="modal" data-target="#fixed-glass")
+               | ?????
+              button.products-item (type="button" data-toggle="modal" data-target="#glass-doors") Staklena vrata
+              button.products-item (type="button" data-toggle="modal" data-target="#wash-basins") Tuš kabine
+              button.products-item (type="button" data-toggle="modal" data-target="#glass-combining")
                | Spajanje stakala tehnikom UV ljepljenja
-              button.products-item (type="button" data-toggle="modal" data-target="#glass-beta") Staklene nadstresnice
-              button.products-item (type="button" data-toggle="modal" data-target="#glass-beta")
+              button.products-item (type="button" data-toggle="modal" data-target="#glass-covers") Staklene nadstrešnice
+              button.products-item (type="button" data-toggle="modal" data-target="#painting-framing")
                | Uokvirenje slika i goblena
-              button.products-item (type="button" data-toggle="modal" data-target="#glass-beta")
+              button.products-item (type="button" data-toggle="modal" data-target="#other-glass-services")
                | Ostale vrste staklarskih radova
 
-        <!-- Inox accordion panel -->
-        .panel.panel-default.products-group
-          .panel-heading.products-title#accord-iron (role="tab")
-            a (role="button" data-toggle="collapse" data-parent="#products-accordion" href="#accordion-third" aria-expanded="false" aria-controls="accordion-third")
-              h2.panel-title INOX I CRNA BRAVARIJA
-          .panel-collapse.collapse#accordion-third (role="tabpanel" aria-labelledby="accord-iron")
-            .panel-body.products-body
-              button.products-item (type="button" data-toggle="modal" data-target="#iron-alpha")
-               | Vanjske i unutarnje ograde
-              button.products-item (type="button" data-toggle="modal" data-target="#iron-beta")
-               | Klizne ograde s otvaranjem
-              button.products-item (type="button" data-toggle="modal" data-target="#iron-beta") Stubista
-              button.products-item (type="button" data-toggle="modal" data-target="#iron-beta") Nadstresnice
-              button.products-item (type="button" data-toggle="modal" data-target="#iron-beta")
-               | Podkonstrukcije i nadkonstrukcije
-              button.products-item (type="button" data-toggle="modal" data-target="#iron-beta")
-               | Ostale vrste bravarskih radova
-
-        <!-- Automatic doors accordion panel -->
+        <!-- Inox accordion -->
         .panel.panel-default.products-group
           .panel-heading.products-title#accord-inox (role="tab")
-            a (role="button" data-toggle="collapse" data-parent="#products-accordion" href="#accordion-fourth" aria-expanded="false" aria-controls="accordion-fourth")
-              h2.panel-title AUTOMATSKA VRATA
-          .panel-collapse.collapse#accordion-fourth (role="tabpanel" aria-labelledby="accord-inox")
+            a (role="button" data-toggle="collapse" data-parent="#products-accordion" href="#third-accordion" aria-expanded="false" aria-controls="third-accordion")
+              h2.panel-title INOX I CRNA BRAVARIJA
+          .panel-collapse.collapse#third-accordion (role="tabpanel" aria-labelledby="accord-inox")
             .panel-body.products-body
-              button.products-item (type="button" data-toggle="modal" data-target="#inox-alpha") Klizna automatska vrata
-              button.products-item (type="button" data-toggle="modal" data-target="#inox-beta") Rotacijska automatska vrata
+              button.products-item (type="button" data-toggle="modal" data-target="#outter-inner-fences")
+               | Vanjske i unutarnje ograde
+              button.products-item (type="button" data-toggle="modal" data-target="#sliding-fences")
+               | Klizne ograde s otvaranjem
+              button.products-item (type="button" data-toggle="modal" data-target="#staircases") Stubišta
+              button.products-item (type="button" data-toggle="modal" data-target="#inox-covers") Nadstrešnice
+              button.products-item (type="button" data-toggle="modal" data-target="#constructions")
+               | Podkonstrukcije i nadkonstrukcije
+              button.products-item (type="button" data-toggle="modal" data-target="#other-inox-services")
+               | Ostale vrste bravarskih radova
+
+        <!-- Automatic doors accordion -->
+        .panel.panel-default.products-group
+          .panel-heading.products-title#accord-automatic-doors (role="tab")
+            a (role="button" data-toggle="collapse" data-parent="#products-accordion" href="#fourth-accordion" aria-expanded="false" aria-controls="fourth-accordion")
+              h2.panel-title AUTOMATSKA VRATA
+          .panel-collapse.collapse#fourth-accordion (role="tabpanel" aria-labelledby="accord-automatic-doors")
+            .panel-body.products-body
+              button.products-item (type="button" data-toggle="modal" data-target="#sliding-automatic-doors")
+               | Klizna automatska vrata
+              button.products-item (type="button" data-toggle="modal" data-target="#rotational-automatic-doors")
+               | Rotacijska automatska vrata

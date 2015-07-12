@@ -187,8 +187,12 @@
     top: -80;
     height: 150px;
     width: 100%;
-    transform: skewY(-3deg);
     background-color: #293036;
+    -webkit-transform: skewY(-3deg);
+     -moz-transform:  skewY(-3deg);
+      -ms-transform: skewY(-3deg);
+       -o-transform: skewY(-3deg);
+        transform: skewY(-3deg);
   }
 
   h1, p, strong {
@@ -272,7 +276,7 @@
     margin-top: 5px;
     border: 0px;
     padding: 3px 0px;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.4);
     color: #b7b8b9;
   }
   .panel-group .panel-heading + .panel-collapse > .panel-body {
@@ -291,7 +295,6 @@
   position: absolute;
   top: 150px;
   width: 100%;
-  height: 440px;
   border: 0px;
   border-radius: 0px;
   background-color: #27333a;
@@ -315,11 +318,18 @@
     text-align: justify;
   }
 }
+.modal-close-button,
+.modal-close-button-xs {
+  position: absolute;
+  font-size: 40px;
+  font-weight: lighter;
+  color: #fff;
+  font-family: "OpenSans-Light";
+}
 
 /* XS - Mobile */
 @media (max-width: 767px) {
-  .modal-content { height: 450px; }
-
+  .modal-content { min-height: 500px; }
   .modal-text-section {
     .modal-heading-underline {
       height: 5px;
@@ -328,15 +338,6 @@
     p {
       margin: 20px 0px;
     }
-    span {
-      position: absolute;
-      top: 15px;
-      right: 25px;
-      font-size: 40px;
-      font-weight: lighter;
-      color: #fff;
-      font-family: "OpenSans-Light";
-    }
   }
   .modal-pictures {
     img {
@@ -344,10 +345,37 @@
       margin: 10px auto;
     }
   }
+  .modal-close-button-xs {
+    top: 18px;
+    right: -15px;
+  }
 }
 
 /* SM - Tablet */
 @media (min-width: 768px) and (max-width: 991px) {
+  .modal-content {
+    top: 130px;
+    height: 450px;
+  }
+  .modal-text-section {
+    .modal-heading-underline {
+      height: 5px;
+      width: 80px;
+    }
+    p {
+      margin: 20px 0px;
+    }
+  }
+  .modal-pictures {
+    img { margin: 20px 5px; }
+    img:nth-child(1) { margin: 17.5px 5px 7.5px; }
+    img:nth-child(2) { margin: 7.5px 5px 17.5px; }
+  }
+  .modal-close-button {
+    top: 10px;
+    right: 20px;
+    font-size: 50px;
+  }
 }
 
 /* MD - Laptop */

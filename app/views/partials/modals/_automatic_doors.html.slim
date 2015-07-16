@@ -5,20 +5,27 @@
       .modal-body
         .container-fluid
           .row
-            .col-xs-11.col-xs-offset-1.col-sm-4.col-sm-offset-2
+            .col-xs-10.col-xs-offset-1.col-sm-4.col-sm-offset-2
               .modal-text-section
                 h2#s-a-d Klizna automatska vrata
-                button.close (type="button" data-dismiss="modal" aria-label="close")
-                  span (aria-hidden="true") x
+                button.close.modal-close-button-xs.visible-xs (type="button" data-dismiss="modal" aria-label="Close")
+                  span.visible-xs (aria-hidden="true") X
                 .modal-heading-underline
                 p
-                 | najbolje staklo za vase potrebe. prozirno, kratko, dugo, kakvo god zelite.
-                 | u svim bojama. cak i dostavljamo, gdje god hocete skoro besplatno.
-                 | u svim bojama. cak i dostavljamo, gdje god hocete skoro besplatno.
-            .col-xs-12.col-sm-6.col-sm-offset-0
+                 | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
+                 | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
+                 | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
+                p.hidden-xs
+                 | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
+                 | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
+                 | U svim bojama. Cak i dostavljamo
+            .col-xs-12.col-sm-3.col-sm-offset-1
               .modal-pictures
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "upper-left-pic")
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "lower-left-pic hidden-xs")
+            .col-sm-2.hidden-xs
+              button.close.modal-close-button (type="button" data-dismiss="modal" aria-label="Close")
+                span (aria-hidden="true") X
 
 <!-- Rotational automatic doors / Rotacijska automatska vrata -->
 .modal.fade#rotational-automatic-doors (tabindex="-1" role="dialog" aria-labelledby="r-a-d")
@@ -27,17 +34,24 @@
       .modal-body
         .container-fluid
           .row
-            .col-xs-11.col-xs-offset-1.col-sm-4.col-sm-offset-2
+            .col-xs-10.col-xs-offset-1.col-sm-4.col-sm-offset-2
               .modal-text-section
                 h2#r-a-d Rotacijska automatska vrata
-                button.close (type="button" data-dismiss="modal" aria-label="close")
-                  span (aria-hidden="true") x
+                button.close.modal-close-button-xs.visible-xs (type="button" data-dismiss="modal" aria-label="Close")
+                  span.visible-xs (aria-hidden="true") X
                 .modal-heading-underline
                 p
-                 | najbolje staklo za vase potrebe. prozirno, kratko, dugo, kakvo god zelite.
-                 | u svim bojama. cak i dostavljamo, gdje god hocete skoro besplatno.
-                 | u svim bojama. cak i dostavljamo, gdje god hocete skoro besplatno.
-            .col-xs-12.col-sm-6.col-sm-offset-0
+                 | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
+                 | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
+                 | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
+                p.hidden-xs
+                 | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
+                 | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
+                 | U svim bojama. Cak i dostavljamo
+            .col-xs-12.col-sm-3.col-sm-offset-1
               .modal-pictures
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "upper-left-pic")
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "lower-left-pic hidden-xs")
+            .col-sm-2.hidden-xs
+              button.close.modal-close-button (type="button" data-dismiss="modal" aria-label="Close")
+                span (aria-hidden="true") X

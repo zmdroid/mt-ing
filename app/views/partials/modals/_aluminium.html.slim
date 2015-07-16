@@ -6,20 +6,27 @@
       .modal-body
         .container-fluid
           .row
-            .col-xs-11.col-xs-offset-1.col-sm-4.col-sm-offset-2
+            .col-xs-10.col-xs-offset-1.col-sm-4.col-sm-offset-2
               .modal-text-section
                 h2#w-a-d Prozori i vrata
-                button.close (type="button" data-dismiss="modal" aria-label="Close")
-                  span (aria-hidden="true") X
+                button.close.modal-close-button-xs.visible-xs (type="button" data-dismiss="modal" aria-label="Close")
+                  span.visible-xs (aria-hidden="true") X
                 .modal-heading-underline
                 p
                  | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
                  | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
                  | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
-            .col-xs-12.col-sm-6.col-sm-offset-0
+                p.hidden-xs
+                 | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
+                 | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
+                 | U svim bojama. Cak i dostavljamo
+            .col-xs-12.col-sm-3.col-sm-offset-1
               .modal-pictures
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "upper-left-pic")
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "lower-left-pic hidden-xs")
+            .col-sm-2.hidden-xs
+              button.close.modal-close-button (type="button" data-dismiss="modal" aria-label="Close")
+                span (aria-hidden="true") X
 
 <!-- Sliding doors / Klizne stijene-->
 .modal.fade#sliding-doors (tabindex="-1" role="dialog" aria-labelledby="s-d")
@@ -28,20 +35,27 @@
       .modal-body
         .container-fluid
           .row
-            .col-xs-11.col-xs-offset-1.col-sm-4.col-sm-offset-2
+            .col-xs-10.col-xs-offset-1.col-sm-4.col-sm-offset-2
               .modal-text-section
                 h2#s-d Klizne stijene
-                button.close (type="button" data-dismiss="modal" aria-label="Close")
-                  span (aria-hidden="true") X
+                button.close.modal-close-button-xs.visible-xs (type="button" data-dismiss="modal" aria-label="Close")
+                  span.visible-xs (aria-hidden="true") X
                 .modal-heading-underline
                 p
                  | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
                  | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
                  | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
-            .col-xs-12.col-sm-6.col-sm-offset-0
+                p.hidden-xs
+                 | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
+                 | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
+                 | U svim bojama. Cak i dostavljamo
+            .col-xs-12.col-sm-3.col-sm-offset-1
               .modal-pictures
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "upper-left-pic")
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "lower-left-pic hidden-xs")
+            .col-sm-2.hidden-xs
+              button.close.modal-close-button (type="button" data-dismiss="modal" aria-label="Close")
+                span (aria-hidden="true") X
 
 <!-- Closing balcons / Zatvaranje balkona i loda -->
 .modal.fade#closing-balcons (tabindex="-1" role="dialog" aria-labelledby="c-b")
@@ -50,20 +64,27 @@
       .modal-body
         .container-fluid
           .row
-            .col-xs-11.col-xs-offset-1.col-sm-4.col-sm-offset-2
+            .col-xs-10.col-xs-offset-1.col-sm-4.col-sm-offset-2
               .modal-text-section
                 h2#c-b Zatvaranje balkona i lođa
-                button.close (type="button" data-dismiss="modal" aria-label="Close")
-                  span (aria-hidden="true") X
+                button.close.modal-close-button-xs.visible-xs (type="button" data-dismiss="modal" aria-label="Close")
+                  span.visible-xs (aria-hidden="true") X
                 .modal-heading-underline
                 p
                  | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
                  | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
                  | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
-            .col-xs-12.col-sm-6.col-sm-offset-0
+                p.hidden-xs
+                 | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
+                 | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
+                 | U svim bojama. Cak i dostavljamo
+            .col-xs-12.col-sm-3.col-sm-offset-1
               .modal-pictures
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "upper-left-pic")
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "lower-left-pic hidden-xs")
+            .col-sm-2.hidden-xs
+              button.close.modal-close-button (type="button" data-dismiss="modal" aria-label="Close")
+                span (aria-hidden="true") X
 
 <!-- Winter gardens / Zimski vrtovi -->
 .modal.fade#winter-gardens (tabindex="-1" role="dialog" aria-labelledby="w-g")
@@ -72,20 +93,27 @@
       .modal-body
         .container-fluid
           .row
-            .col-xs-11.col-xs-offset-1.col-sm-4.col-sm-offset-2
+            .col-xs-10.col-xs-offset-1.col-sm-4.col-sm-offset-2
               .modal-text-section
                 h2#w-g Zimski vrtovi
-                button.close (type="button" data-dismiss="modal" aria-label="Close")
-                  span (aria-hidden="true") X
+                button.close.modal-close-button-xs.visible-xs (type="button" data-dismiss="modal" aria-label="Close")
+                  span.visible-xs (aria-hidden="true") X
                 .modal-heading-underline
                 p
                  | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
                  | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
                  | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
-            .col-xs-12.col-sm-6.col-sm-offset-0
+                p.hidden-xs
+                 | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
+                 | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
+                 | U svim bojama. Cak i dostavljamo
+            .col-xs-12.col-sm-3.col-sm-offset-1
               .modal-pictures
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "upper-left-pic")
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "lower-left-pic hidden-xs")
+            .col-sm-2.hidden-xs
+              button.close.modal-close-button (type="button" data-dismiss="modal" aria-label="Close")
+                span (aria-hidden="true") X
 
 <!-- Outter layout / Fasadne stijene -->
 .modal.fade#outter-layout (tabindex="-1" role="dialog" aria-labelledby="o-l")
@@ -94,20 +122,27 @@
       .modal-body
         .container-fluid
           .row
-            .col-xs-11.col-xs-offset-1.col-sm-4.col-sm-offset-2
+            .col-xs-10.col-xs-offset-1.col-sm-4.col-sm-offset-2
               .modal-text-section
                 h2#o-l Fasadne stijene
-                button.close (type="button" data-dismiss="modal" aria-label="Close")
-                  span (aria-hidden="true") X
+                button.close.modal-close-button-xs.visible-xs (type="button" data-dismiss="modal" aria-label="Close")
+                  span.visible-xs (aria-hidden="true") X
                 .modal-heading-underline
                 p
                  | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
                  | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
                  | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
-            .col-xs-12.col-sm-6.col-sm-offset-0
+                p.hidden-xs
+                 | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
+                 | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
+                 | U svim bojama. Cak i dostavljamo
+            .col-xs-12.col-sm-3.col-sm-offset-1
               .modal-pictures
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "upper-left-pic")
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "lower-left-pic hidden-xs")
+            .col-sm-2.hidden-xs
+              button.close.modal-close-button (type="button" data-dismiss="modal" aria-label="Close")
+                span (aria-hidden="true") X
 
 <!-- Grills / Grilje -->
 .modal.fade#grills (tabindex="-1" role="dialog" aria-labelledby="grills")
@@ -116,20 +151,27 @@
       .modal-body
         .container-fluid
           .row
-            .col-xs-11.col-xs-offset-1.col-sm-4.col-sm-offset-2
+            .col-xs-10.col-xs-offset-1.col-sm-4.col-sm-offset-2
               .modal-text-section
                 h2#grills Grilje
-                button.close (type="button" data-dismiss="modal" aria-label="Close")
-                  span (aria-hidden="true") X
+                button.close.modal-close-button-xs.visible-xs (type="button" data-dismiss="modal" aria-label="Close")
+                  span.visible-xs (aria-hidden="true") X
                 .modal-heading-underline
                 p
                  | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
                  | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
                  | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
-            .col-xs-12.col-sm-6.col-sm-offset-0
+                p.hidden-xs
+                 | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
+                 | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
+                 | U svim bojama. Cak i dostavljamo
+            .col-xs-12.col-sm-3.col-sm-offset-1
               .modal-pictures
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "upper-left-pic")
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "lower-left-pic hidden-xs")
+            .col-sm-2.hidden-xs
+              button.close.modal-close-button (type="button" data-dismiss="modal" aria-label="Close")
+                span (aria-hidden="true") X
 
 <!-- Window covers / Zaluzine, venecijaneri i komarinci -->
 .modal.fade#window-covers (tabindex="-1" role="dialog" aria-labelledby="w-c")
@@ -138,20 +180,27 @@
       .modal-body
         .container-fluid
           .row
-            .col-xs-11.col-xs-offset-1.col-sm-4.col-sm-offset-2
+            .col-xs-10.col-xs-offset-1.col-sm-4.col-sm-offset-2
               .modal-text-section
                 h2#w-c Žaluzine, venecijaneri i komarinci
-                button.close (type="button" data-dismiss="modal" aria-label="Close")
-                  span (aria-hidden="true") X
+                button.close.modal-close-button-xs.visible-xs (type="button" data-dismiss="modal" aria-label="Close")
+                  span.visible-xs (aria-hidden="true") X
                 .modal-heading-underline
                 p
                  | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
                  | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
                  | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
-            .col-xs-12.col-sm-6.col-sm-offset-0
+                p.hidden-xs
+                 | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
+                 | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
+                 | U svim bojama. Cak i dostavljamo
+            .col-xs-12.col-sm-3.col-sm-offset-1
               .modal-pictures
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "upper-left-pic")
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "lower-left-pic hidden-xs")
+            .col-sm-2.hidden-xs
+              button.close.modal-close-button (type="button" data-dismiss="modal" aria-label="Close")
+                span (aria-hidden="true") X
 
 <!-- Wall covers / Unutarnje i vanjske stijene -->
 .modal.fade#wall-covers (tabindex="-1" role="dialog" aria-labelledby="wall-c")
@@ -160,17 +209,24 @@
       .modal-body
         .container-fluid
           .row
-            .col-xs-11.col-xs-offset-1.col-sm-4.col-sm-offset-2
+            .col-xs-10.col-xs-offset-1.col-sm-4.col-sm-offset-2
               .modal-text-section
                 h2#wall-c Unutarnje i vanjske stijene
-                button.close (type="button" data-dismiss="modal" aria-label="Close")
-                  span (aria-hidden="true") X
+                button.close.modal-close-button-xs.visible-xs (type="button" data-dismiss="modal" aria-label="Close")
+                  span.visible-xs (aria-hidden="true") X
                 .modal-heading-underline
                 p
                  | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
                  | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
                  | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
-            .col-xs-12.col-sm-6.col-sm-offset-0
+                p.hidden-xs
+                 | Najbolje staklo za vase potrebe. Prozirno, kratko, dugo, kakvo god zelite.
+                 | U svim bojama. Cak i dostavljamo, gdje god hocete skoro besplatno.
+                 | U svim bojama. Cak i dostavljamo
+            .col-xs-12.col-sm-3.col-sm-offset-1
               .modal-pictures
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "upper-left-pic")
                 = image_tag('products/img-200x200.png', alt: 'staklo', class: "lower-left-pic hidden-xs")
+            .col-sm-2.hidden-xs
+              button.close.modal-close-button (type="button" data-dismiss="modal" aria-label="Close")
+                span (aria-hidden="true") X

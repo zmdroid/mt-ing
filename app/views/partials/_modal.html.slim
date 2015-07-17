@@ -1,0 +1,21 @@
+.modal.fade  (id="#{modal.css_id}" tabindex="-1" role="dialog" aria-labelledby="#{modal.aria_label}")
+  .modal-dialog (role="document")
+    .modal-content
+      .modal-body
+        .container-fluid
+          .row
+            .col-xs-10.col-xs-offset-1.col-sm-4.col-sm-offset-2
+              .modal-text-section
+                h2 id="#{modal.aria_label}" #{modal.h2}
+                button.close.modal-close-button-xs.visible-xs (type="button" data-dismiss="modal" aria-label="Close")
+                  span.visible-xs (aria-hidden="true") X
+                .modal-heading-underline
+                p.upper_para = modal.upper_para
+                p.lower_para.hidden-xs = modal.lower_para
+            .col-xs-12.col-sm-3.col-sm-offset-1
+              .modal-pictures
+                = image_tag('products/img-200x200.png', alt: 'staklo', class: "upper-left-pic")
+                = image_tag('products/img-200x200.png', alt: 'staklo', class: "lower-left-pic hidden-xs")
+            .col-sm-2.hidden-xs
+              button.close.modal-close-button (type="button" data-dismiss="modal" aria-label="Close")
+                span (aria-hidden="true") X

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150703023533) do
+ActiveRecord::Schema.define(version: 20150717002523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,17 @@ ActiveRecord::Schema.define(version: 20150703023533) do
     t.string   "deadline"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+  end
+
+  create_table "modals", force: :cascade do |t|
+    t.string   "css_id"
+    t.string   "aria_label"
+    t.string   "h2"
+    t.string   "upper_para"
+    t.string   "lower_para"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "group"
   end
 
 end

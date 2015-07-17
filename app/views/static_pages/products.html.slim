@@ -1,7 +1,8 @@
-= render "partials/modals/aluminium"
-= render "partials/modals/glass"
-= render "partials/modals/inox"
-= render "partials/modals/automatic_doors"
+<!-- MODALS -->
+= render partial: "partials/modal", collection: @aluminium_modals, as: :modal
+= render partial: "partials/modal", collection: @glass_modals, as: :modal
+= render partial: "partials/modal", collection: @inox_modals, as: :modal
+= render partial: "partials/modal", collection: @automatic_door_modals, as: :modal
 
 <!-- Products page -->
 .container-fluid.picture-bg
@@ -16,14 +17,7 @@
               h2.panel-title ALUMINIJSKA STOLARIJA
           .panel-collapse.collapse.in#first-accordion (role="tabpanel" aria-labelledby="accord-aluminium")
             .panel-body.products-body
-              button.products-item (type="button" data-toggle="modal" data-target="#windows-and-doors") Prozori i vrata
-              button.products-item (type="button" data-toggle="modal" data-target="#sliding-doors") Klizne stijene
-              button.products-item (type="button" data-toggle="modal" data-target="#closing-balcons") Zatvaranje balkona i lođa
-              button.products-item (type="button" data-toggle="modal" data-target="#winter-gardens") Zimski vrtovi
-              button.products-item (type="button" data-toggle="modal" data-target="#outter-layout") Fasadne stijene
-              button.products-item (type="button" data-toggle="modal" data-target="#grills") Grilje
-              button.products-item (type="button" data-toggle="modal" data-target="#window-covers") Žaluzine, venecijaneri i komarinci
-              button.products-item (type="button" data-toggle="modal" data-target="#wall-covers") Unutarnje i vanjske stijene
+              = render partial: "partials/modal_button", collection: @aluminium_modals, as: :modal
 
         <!-- Glass accordion -->
         .panel.panel-default.products-group
@@ -32,19 +26,7 @@
               h2.panel-title STAKLARSKI RADOVI
           .panel-collapse.collapse#second-accordion (role="tabpanel" aria-labelledby="accord-glass")
             .panel-body.products-body
-              button.products-item (type="button" data-toggle="modal" data-target="#all-glass-types")
-               | Sve vrste stakala (IZO, ogledala, zičana...)
-              button.products-item (type="button" data-toggle="modal" data-target="#fixed-glass")
-               | Staklene fiksne i klizne stijene
-              button.products-item (type="button" data-toggle="modal" data-target="#glass-doors") Staklena vrata
-              button.products-item (type="button" data-toggle="modal" data-target="#wash-basins") Tuš kabine
-              button.products-item (type="button" data-toggle="modal" data-target="#glass-combining")
-               | Spajanje stakala tehnikom UV ljepljenja
-              button.products-item (type="button" data-toggle="modal" data-target="#glass-covers") Staklene nadstrešnice
-              button.products-item (type="button" data-toggle="modal" data-target="#painting-framing")
-               | Uokvirenje slika i goblena
-              button.products-item (type="button" data-toggle="modal" data-target="#other-glass-services")
-               | Ostale vrste staklarskih radova
+              = render partial: "partials/modal_button", collection: @glass_modals, as: :modal
 
         <!-- Inox accordion -->
         .panel.panel-default.products-group
@@ -53,16 +35,7 @@
               h2.panel-title INOX I CRNA BRAVARIJA
           .panel-collapse.collapse#third-accordion (role="tabpanel" aria-labelledby="accord-inox")
             .panel-body.products-body
-              button.products-item (type="button" data-toggle="modal" data-target="#outter-inner-fences")
-               | Vanjske i unutarnje ograde
-              button.products-item (type="button" data-toggle="modal" data-target="#sliding-fences")
-               | Klizne ograde s otvaranjem
-              button.products-item (type="button" data-toggle="modal" data-target="#staircases") Stubišta
-              button.products-item (type="button" data-toggle="modal" data-target="#inox-covers") Nadstrešnice
-              button.products-item (type="button" data-toggle="modal" data-target="#constructions")
-               | Podkonstrukcije i nadkonstrukcije
-              button.products-item (type="button" data-toggle="modal" data-target="#other-inox-services")
-               | Ostale vrste bravarskih radova
+              = render partial: "partials/modal_button", collection: @inox_modals, as: :modal
 
         <!-- Automatic doors accordion -->
         .panel.panel-default.products-group
@@ -71,7 +44,4 @@
               h2.panel-title AUTOMATSKA VRATA
           .panel-collapse.collapse#fourth-accordion (role="tabpanel" aria-labelledby="accord-automatic-doors")
             .panel-body.products-body
-              button.products-item (type="button" data-toggle="modal" data-target="#sliding-automatic-doors")
-               | Klizna automatska vrata
-              button.products-item (type="button" data-toggle="modal" data-target="#rotational-automatic-doors")
-               | Rotacijska automatska vrata
+              = render partial: "partials/modal_button", collection: @automatic_door_modals, as: :modal

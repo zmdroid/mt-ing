@@ -223,14 +223,160 @@
   }
 }
 
+/************************
+**** Company history ****
+*************************/
 
+.company-history-bg {
+  height: 100%;
+  margin-top: -100px;
+  background: #000 image-url("home_page/home_page_1.jpg") center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  .gradient-bg {
+    height: 100%;
+    background-image: -webkit-linear-gradient(transparent 0, transparent 193px, rgba(0, 0, 0, 0.5) 193px);
+    background-image:    -moz-linear-gradient(transparent 0, transparent 193px, rgba(0, 0, 0, 0.5) 193px);
+    background-image:      -o-linear-gradient(transparent 0, transparent 193px, rgba(0, 0, 0, 0.5) 193px);
+    background-image:         linear-gradient(transparent 0, transparent 193px, rgba(0, 0, 0, 0.5) 193px);
+  }
+
+  .heading-bg {
+    width: 300px;
+    margin: auto;
+    margin-top: 175px;
+    padding: 10px;
+    background-color: #384450;
+    -webkit-transform: skewX(-15deg);
+    -moz-transform:  skewX(-15deg);
+    -ms-transform: skewX(-15deg);
+    -o-transform: skewX(-15deg);
+    transform: skewX(-15deg);
+    overflow: hidden;
+
+    h2 {
+      margin: 0px;
+      font-size: 20px;
+      color: #fff;
+      font-family: "OpenSans-Light";
+      text-align: center;
+      -webkit-transform: skewX(15deg);
+      -moz-transform:  skewX(15deg);
+      -ms-transform: skewX(15deg);
+      -o-transform: skewX(15deg);
+      transform: skewX(15deg);
+    }
+  }
+
+  .description {
+    width: 550px;
+    margin: auto;
+    margin-top: 25px;
+
+    p {
+      margin-bottom: 20px;
+      color: #fff;
+      font-family: "OpenSans-Light";
+      font-weight: 0;
+      text-align: center;
+    }
+
+    .company-history-green-divider {
+      width: 150px;
+      height: 3px;
+      margin: auto;
+      background-color: #22d3b6;
+    }
+  }
+
+  .history-pics {
+    width: 606px;
+    height: 200px;
+    margin: auto;
+    margin-top: 50px;
+
+    img {
+      float: left;
+      border: 1px solid #000;
+    }
+  }
+}
+
+/* XS - Mobile */
+@media (max-width: 767px) {
+  .company-history-bg {
+    .heading-bg {
+      width: 75%;
+    }
+    .description {
+      width: 75%;
+      margin-top: 50px;
+
+      p {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+/* SM */
+@media (min-width: 768px) and (max-width: 991px) {
+  .company-history-bg {
+    .gradient-bg {
+      background-image: -webkit-linear-gradient(transparent 0, transparent 170px, rgba(0, 0, 0, 0.5) 170px);
+      background-image:    -moz-linear-gradient(transparent 0, transparent 170px, rgba(0, 0, 0, 0.5) 170px);
+      background-image:      -o-linear-gradient(transparent 0, transparent 170px, rgba(0, 0, 0, 0.5) 170px);
+      background-image:         linear-gradient(transparent 0, transparent 170px, rgba(0, 0, 0, 0.5) 170px);
+    }
+    .heading-bg { margin-top: 145px; }
+    .description { margin-top: 35px; }
+    .history-pics { margin-top: 40px; }
+  }
+}
+
+/* MD */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .company-history-bg {
+    .gradient-bg {
+      background-image: -webkit-linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
+      background-image:    -moz-linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
+      background-image:      -o-linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
+      background-image:         linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
+    }
+    .heading-bg { margin-top: 175px; }
+    .description { margin-top: 55px; }
+    .history-pics { margin-top: 70px; }
+  }
+}
+
+/* LG */
+@media (min-width: 1200px) {
+  .company-history-bg {
+    .gradient-bg {
+      background-image: -webkit-linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
+      background-image:    -moz-linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
+      background-image:      -o-linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
+      background-image:         linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
+    }
+    .heading-bg { margin-top: 175px; }
+    .description { margin-top: 45px; }
+    .history-pics { margin-top: 60px; }
+  }
+}
 /************************
 **** Products/Ponuda ****
 *************************/
 .picture-bg {
   min-height: 100%;
   margin-top: -100px;
-  background-image: image-url("products/background.jpg");
+  background: #000 image-url("products/background.jpg") center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 // Accordion
@@ -285,7 +431,7 @@
   }
 }
 
-// Modals
+// MODALS
 
 .modal-dialog {
   width: 100%;
@@ -434,3 +580,4 @@
     font-size: 50px;
   }
 }
+

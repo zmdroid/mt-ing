@@ -224,52 +224,144 @@
 }
 
 /************************
+****    About us     ****
+*************************/
+.about-us-bg {
+  height: 100%;
+  margin-top: -100px;
+}
+
+.gradient-bg {
+  height: 100%;
+  padding-top: 175px;
+  background-image: -webkit-linear-gradient(transparent 0, transparent 193px, rgba(0, 0, 0, 0.5) 193px);
+  background-image:    -moz-linear-gradient(transparent 0, transparent 193px, rgba(0, 0, 0, 0.5) 193px);
+  background-image:      -o-linear-gradient(transparent 0, transparent 193px, rgba(0, 0, 0, 0.5) 193px);
+  background-image:         linear-gradient(transparent 0, transparent 193px, rgba(0, 0, 0, 0.5) 193px);
+}
+
+.heading-bg {
+  width: 300px;
+  margin: auto;
+  padding: 10px;
+  background-color: #384450;
+  -webkit-transform: skewX(-15deg);
+  -moz-transform:  skewX(-15deg);
+  -ms-transform: skewX(-15deg);
+  -o-transform: skewX(-15deg);
+  transform: skewX(-15deg);
+  overflow: hidden;
+
+  h2 {
+    margin: 0px;
+    font-size: 20px;
+    color: #fff;
+    font-family: "OpenSans-Light";
+    text-align: center;
+    -webkit-transform: skewX(15deg);
+    -moz-transform:  skewX(15deg);
+    -ms-transform: skewX(15deg);
+    -o-transform: skewX(15deg);
+    transform: skewX(15deg);
+  }
+}
+
+/************************
+****    Machinery    ****
+*************************/
+.machinery-bg-pic {
+  background: #000 image-url("home_page/home_page_2.jpg") center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.machinery-content {
+  .machinery-pics img {
+    position: relative;
+    width: 50%;
+    border: 1px solid #000;
+  }
+
+  .machinery-icon {
+    position: absolute;
+    bottom: 1;
+    left: -25px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    padding: 5px;
+    background-color: #22d3b6;
+
+    img {
+      height: 30px;
+      width: 30px;
+      border: none;
+    }
+  }
+
+  h3, p {
+    margin: 0px;
+    font-family: "OpenSans-Light";
+    color: #fff;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  #machinery-green-bar {
+    height: 5px;
+    width: 75px;
+    margin-bottom: 30px;
+    background-color: #22d3b6;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+}
+
+/* XS - Mobile */
+@media (max-width: 767px) {
+  .machinery-content {
+    margin-top: 50px;
+
+    h3, p { text-align: center; }
+    #machinery-green-bar {
+      margin: auto;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+/* SM */
+@media (min-width: 768px) and (max-width: 991px) {
+  .machinery-content { margin-top: 70px; }
+}
+
+/* MD */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .machinery-content { margin-top: 105px; }
+}
+
+/* LG */
+@media (min-width: 1200px) {
+  .machinery-content { margin-top: 115px; }
+}
+
+/************************
 **** Company history ****
 *************************/
 
-.company-history-bg {
-  height: 100%;
-  margin-top: -100px;
+.company-history-pic {
   background: #000 image-url("home_page/home_page_1.jpg") center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-  .gradient-bg {
-    height: 100%;
-    padding-top: 175px;
-    background-image: -webkit-linear-gradient(transparent 0, transparent 193px, rgba(0, 0, 0, 0.5) 193px);
-    background-image:    -moz-linear-gradient(transparent 0, transparent 193px, rgba(0, 0, 0, 0.5) 193px);
-    background-image:      -o-linear-gradient(transparent 0, transparent 193px, rgba(0, 0, 0, 0.5) 193px);
-    background-image:         linear-gradient(transparent 0, transparent 193px, rgba(0, 0, 0, 0.5) 193px);
-  }
-
-  .heading-bg {
-    width: 300px;
-    margin: auto;
-    padding: 10px;
-    background-color: #384450;
-    -webkit-transform: skewX(-15deg);
-    -moz-transform:  skewX(-15deg);
-    -ms-transform: skewX(-15deg);
-    -o-transform: skewX(-15deg);
-    transform: skewX(-15deg);
-    overflow: hidden;
-
-    h2 {
-      margin: 0px;
-      font-size: 20px;
-      color: #fff;
-      font-family: "OpenSans-Light";
-      text-align: center;
-      -webkit-transform: skewX(15deg);
-      -moz-transform:  skewX(15deg);
-      -ms-transform: skewX(15deg);
-      -o-transform: skewX(15deg);
-      transform: skewX(15deg);
-    }
-  }
 
   .description {
     width: 550px;
@@ -364,6 +456,7 @@
     .history-pics { margin-top: 60px; }
   }
 }
+
 /************************
 **** Products/Ponuda ****
 *************************/
@@ -578,4 +671,3 @@
     font-size: 50px;
   }
 }
-

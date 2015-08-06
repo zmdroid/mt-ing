@@ -232,7 +232,6 @@
 }
 
 .gradient-bg {
-  min-height: 100%;
   padding-top: 175px;
   background-image: -webkit-linear-gradient(transparent 0, transparent 193px, rgba(0, 0, 0, 0.5) 193px);
   background-image:    -moz-linear-gradient(transparent 0, transparent 193px, rgba(0, 0, 0, 0.5) 193px);
@@ -264,6 +263,26 @@
     -o-transform: skewX(15deg);
     transform: skewX(15deg);
   }
+}
+
+/* XS - Mobile */
+@media (max-width: 767px) {
+  .gradient-bg { min-height: 100%; }
+}
+
+/* SM */
+@media (min-width: 768px) and (max-width: 991px) {
+  .gradient-bg { height: 100%; }
+}
+
+/* MD */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .gradient-bg { height: 100%; }
+}
+
+/* LG */
+@media (min-width: 1200px) {
+  .gradient-bg { height: 100%; }
 }
 
 /************************

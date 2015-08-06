@@ -227,12 +227,12 @@
 ****    About us     ****
 *************************/
 .about-us-bg {
-  height: 100%;
+  min-height: 100%;
   margin-top: -100px;
 }
 
 .gradient-bg {
-  height: 100%;
+  min-height: 100%;
   padding-top: 175px;
   background-image: -webkit-linear-gradient(transparent 0, transparent 193px, rgba(0, 0, 0, 0.5) 193px);
   background-image:    -moz-linear-gradient(transparent 0, transparent 193px, rgba(0, 0, 0, 0.5) 193px);
@@ -263,6 +263,94 @@
     -ms-transform: skewX(15deg);
     -o-transform: skewX(15deg);
     transform: skewX(15deg);
+  }
+}
+
+/************************
+****    Employees    ****
+*************************/
+.employees-bg-pic {
+  background: #000 image-url("about/employees/employees-bg.jpg") center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.an-employee {
+  float: left;
+  height: 85px;
+  width: 200px;
+  padding: 5px;
+
+  .profile-pic {
+    float: left;
+    margin-right: 5px;
+    border: 5px solid #384450;
+    border-radius: 100%;
+  }
+
+  .profile-info {
+    display: inline;
+
+    .employee-position,
+    .employee-name {
+      font-family: "OpenSans-Light";
+    }
+    .employee-position {
+      display: inline-block;
+      margin-top: 10px;
+      color: lightgrey;
+      font-size: 12px;
+    }
+    .employee-name {
+      margin: 5px 0px 3px;
+      color: #fff;
+      font-size: 16px;
+    }
+    .employee-green-bar {
+      display: inline-block;
+      height: 4px;
+      width: 55px;
+      background-color: #23cadd;
+    }
+  }
+}
+
+
+/* XS - Mobile */
+@media (max-width: 767px) {
+  .heading-bg {
+    margin-bottom: 30px;
+  }
+  .an-employee {
+    float: none;
+    margin: 15px auto;
+  }
+}
+
+/* SM */
+@media (min-width: 768px) and (max-width: 991px) {
+  .an-employee { margin: 20px 0px; }
+}
+
+/* MD */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .an-employee { margin: 40px 0px; }
+}
+
+/* LG */
+@media (min-width: 1200px) and (max-width: 1280px) {
+  .an-employee {
+    margin: 30px 0px;
+    margin-left: 40px;
+  }
+}
+
+@media (min-width: 1281px) {
+  .an-employee {
+    margin: 55px 0px;
+    margin-left: 60px;
   }
 }
 

@@ -18,10 +18,10 @@ class StaticPagesController < ApplicationController
   end
 
   def products
-    @products_active = true
-    @aluminium_modals = Modal.where(group: "aluminium")
-    @glass_modals = Modal.where(group: "glass")
-    @inox_modals = Modal.where(group: "inox")
+    @products_active       = true
+    @aluminium_modals      = Modal.where(group: "aluminium")
+    @glass_modals          = Modal.where(group: "glass")
+    @inox_modals           = Modal.where(group: "inox")
     @automatic_door_modals = Modal.where(group: "automatic-doors")
   end
 

@@ -13,12 +13,11 @@ gem "autoprefixer-rails"
 gem "bcrypt"
 
 group :development, :test do
-  gem "rspec-rails", "~> 3.1.0"
+  gem "rspec-rails", ">= 3.1.0"
   gem "factory_girl_rails", "~> 4.4.1"
   gem "spring", "~> 1.3.5"
   gem "better_errors", "~> 2.1.1"
   gem "pry-rails", "~> 0.3.3"
-  gem "binding_of_caller"
 end
 
 group :test do

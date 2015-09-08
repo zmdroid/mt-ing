@@ -97,6 +97,7 @@ body {
   #menu_content {
     margin: 55px -15px 0px -15px;
   }
+  #about-us { margin-left: 36% }
 }
 
 /** (iPhone 6, 6+....) **/
@@ -110,6 +111,7 @@ body {
    aside.sidebar_xs {
      margin-top: -55px;
    }
+  #about-us { margin-left: 38% }
 }
 
 /** (tablets etc.) **/
@@ -151,7 +153,7 @@ body {
   }
 }
 
-/** SM-LG **/
+/** SM-MD **/
 @media (min-width: 768px) {
 
   #menu_content {
@@ -179,8 +181,9 @@ body {
     }
 
     .sub_list {
+      padding: 5px;
+      padding-top: 25px;
       margin: 0px;
-      margin-top: 25px;
       border: none;
       background-color: #23282b;
       box-shadow: none;
@@ -189,5 +192,11 @@ body {
 
   #green_line {
      margin-left: -100px;
+  }
+}
+
+@media (min-width: 979px)  {
+  ul.main_list li.dropdown:hover > ul.dropdown-menu {
+    display: block;
   }
 }

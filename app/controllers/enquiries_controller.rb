@@ -13,7 +13,7 @@ class EnquiriesController < ApplicationController
       flash[:notice] = "Vaš upit je uspješno zaprimljen!"
       redirect_to contact_path
     else
-      enquiry_errors = @enquiry.errors
+      enquiry_errors  = @enquiry.errors
       @invalid_name   = collect_errors(enquiry_errors, :name)
       @invalid_email  = collect_errors(enquiry_errors, :email)
       @phone_error    = collect_errors(enquiry_errors, :phone)

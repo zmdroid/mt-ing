@@ -577,6 +577,10 @@
   background-size: cover;
 }
 
+button:focus {
+  outline: none;
+}
+
 // Accordion
 .products-accordion-container {
   width: 60%;

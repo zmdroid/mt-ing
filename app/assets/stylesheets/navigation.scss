@@ -12,6 +12,10 @@ body {
   display: inline-block;
 }
 
+a:focus {
+  outline: none;
+}
+
 .navbar.navbar-default {
   width: 100%;
   background-color: #23282b;

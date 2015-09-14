@@ -232,6 +232,7 @@
 }
 
 .gradient-bg {
+  min-height: 100%;
   padding-top: 175px;
   background-image: -webkit-linear-gradient(transparent 0, transparent 193px, rgba(0, 0, 0, 0.5) 193px);
   background-image:    -moz-linear-gradient(transparent 0, transparent 193px, rgba(0, 0, 0, 0.5) 193px);
@@ -267,22 +268,117 @@
 
 /* XS - Mobile */
 @media (max-width: 767px) {
-  .gradient-bg { min-height: 100%; }
 }
 
 /* SM */
 @media (min-width: 768px) and (max-width: 991px) {
-  .gradient-bg { height: 100%; }
+  .gradient-bg {
+    padding-top: 145px;
+    background-image: -webkit-linear-gradient(transparent 0, transparent 170px, rgba(0, 0, 0, 0.5) 170px);
+    background-image:    -moz-linear-gradient(transparent 0, transparent 170px, rgba(0, 0, 0, 0.5) 170px);
+    background-image:      -o-linear-gradient(transparent 0, transparent 170px, rgba(0, 0, 0, 0.5) 170px);
+    background-image:         linear-gradient(transparent 0, transparent 170px, rgba(0, 0, 0, 0.5) 170px);
+  }
 }
 
+/* transparent black background */
+@media (min-width: 992px) {
+  .gradient-bg {
+    background-image: -webkit-linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
+    background-image:    -moz-linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
+    background-image:      -o-linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
+    background-image:         linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
+  }
+}
 /* MD */
 @media (min-width: 992px) and (max-width: 1199px) {
-  .gradient-bg { height: 100%; }
 }
 
 /* LG */
 @media (min-width: 1200px) {
-  .gradient-bg { height: 100%; }
+}
+
+/************************
+**** Company history ****
+*************************/
+
+.company-history-pic {
+  background: #000 image-url("home_page/home_page_1.jpg") center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  .description {
+    padding: 0px 15%;
+    p {
+      margin-bottom: 25px;
+      color: #fff;
+      font-family: "OpenSans-Light";
+      font-weight: 0;
+      text-align: center;
+    }
+    .company-history-green-divider {
+      width: 150px;
+      height: 3px;
+      margin: auto;
+      background-color: #22d3b6;
+    }
+  }
+
+  .history-pics {
+    img {
+      float: left;
+      border: 1px solid #000;
+    }
+  }
+}
+
+/* XS - Mobile */
+@media (max-width: 767px) {
+  .company-history-pic {
+    .heading-bg {
+      width: 75%;
+    }
+    .description { margin: 25px 0px 15px 0px; }
+    .history-pics {
+      width: 302px;
+      height: 612px;
+      margin: 20px auto;
+    }
+    .history-images { padding: 0px; }
+  }
+}
+
+/* SM */
+@media (min-width: 768px) {
+  .company-history-pic {
+    .description { margin: 65px 0px 15px 0px; }
+    .history-pics {
+      width: 906px;
+      height: 204px;
+      margin: 60px auto 60px;
+    }
+  }
+}
+
+
+/* MD */
+@media (min-width: 992px) {
+  .company-history-pic {
+    .history-pics {
+      height: 404px;
+      margin: 30px auto;
+    }
+  }
+}
+
+/* LG */
+@media (min-width: 1200px) {
+  .company-history-pic {
+    .description { padding: 0px 27%; }
+    .history-pics { margin: 80px auto 120px; }
+  }
 }
 
 /************************
@@ -339,9 +435,7 @@
 
 /* XS - Mobile */
 @media (max-width: 767px) {
-  .heading-bg {
-    margin-bottom: 30px;
-  }
+  .heading-bg { margin-bottom: 30px; }
   .an-employee {
     float: none;
     margin: 15px auto;
@@ -353,6 +447,7 @@
   .an-employee { margin: 20px 0px; }
 }
 
+
 /* MD */
 @media (min-width: 992px) and (max-width: 1199px) {
   .an-employee { margin: 40px 0px; }
@@ -360,17 +455,11 @@
 
 /* LG */
 @media (min-width: 1200px) and (max-width: 1280px) {
-  .an-employee {
-    margin: 30px 0px;
-    margin-left: 40px;
-  }
+  .an-employee { margin: 30px 0px 30px 40px; }
 }
 
 @media (min-width: 1281px) {
-  .an-employee {
-    margin: 55px 0px;
-    margin-left: 60px;
-  }
+  .an-employee { margin: 55px 0px 55px 60px; }
 }
 
 /************************
@@ -457,111 +546,6 @@
 /* LG */
 @media (min-width: 1200px) {
   .machinery-content { margin-top: 115px; }
-}
-
-/************************
-**** Company history ****
-*************************/
-
-.company-history-pic {
-  background: #000 image-url("home_page/home_page_1.jpg") center center no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-  .description {
-    width: 550px;
-    margin: auto;
-    margin-top: 25px;
-
-    p {
-      margin-bottom: 20px;
-      color: #fff;
-      font-family: "OpenSans-Light";
-      font-weight: 0;
-      text-align: center;
-    }
-
-    .company-history-green-divider {
-      width: 150px;
-      height: 3px;
-      margin: auto;
-      background-color: #22d3b6;
-    }
-  }
-
-  .history-pics {
-    width: 606px;
-    height: 200px;
-    margin: auto;
-    margin-top: 50px;
-
-    img {
-      float: left;
-      border: 1px solid #000;
-    }
-  }
-}
-
-/* XS - Mobile */
-@media (max-width: 767px) {
-  .company-history-bg {
-    .heading-bg {
-      width: 75%;
-    }
-    .description {
-      width: 75%;
-      margin-top: 50px;
-
-      p {
-        margin-bottom: 30px;
-      }
-    }
-  }
-}
-
-/* SM */
-@media (min-width: 768px) and (max-width: 991px) {
-  .company-history-bg {
-    .gradient-bg {
-      padding-top: 145px;
-      background-image: -webkit-linear-gradient(transparent 0, transparent 170px, rgba(0, 0, 0, 0.5) 170px);
-      background-image:    -moz-linear-gradient(transparent 0, transparent 170px, rgba(0, 0, 0, 0.5) 170px);
-      background-image:      -o-linear-gradient(transparent 0, transparent 170px, rgba(0, 0, 0, 0.5) 170px);
-      background-image:         linear-gradient(transparent 0, transparent 170px, rgba(0, 0, 0, 0.5) 170px);
-    }
-    .description { margin-top: 35px; }
-    .history-pics { margin-top: 40px; }
-  }
-}
-
-/* MD */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .company-history-bg {
-    .gradient-bg {
-      background-image: -webkit-linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
-      background-image:    -moz-linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
-      background-image:      -o-linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
-      background-image:         linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
-    }
-    .description { margin-top: 55px; }
-    .history-pics { margin-top: 70px; }
-  }
-}
-
-/* LG */
-@media (min-width: 1200px) {
-  .company-history-bg {
-    .gradient-bg {
-      background-image: -webkit-linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
-      background-image:    -moz-linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
-      background-image:      -o-linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
-      background-image:         linear-gradient(transparent 0, transparent 200px, rgba(0, 0, 0, 0.5) 200px);
-    }
-    .description { margin-top: 45px; }
-    .history-pics { margin-top: 60px; }
-  }
 }
 
 /************************

@@ -12,34 +12,34 @@ nav.navbar.navbar-default
             span.icon-bar
           // Setting MT-ING logo.
           a.navbar-brand (href="/home")
-            = image_tag('icons/mt-ing_teal_icon.png', class: 'logo_img', alt: 'MT-ING', size: "120x80")
+            = image_tag("icons/mt-ing_teal_icon.png", class: "logo_img", alt: "MT-ING", size: "120x80")
 
       // Main menu on the right side.
       .col-sm-8.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-1
         .collapse.navbar-collapse#menu_content
           ul.nav.navbar-nav.navbar-right.main_list
             li.menu_item
-              = activate_link(@home_active, 'NASLOVNICA', home_path)
+              = activate_link(@home_active, "NASLOVNICA", home_path)
             li.menu_divider.hidden-xs
               | /
             li.menu_item.dropdown (role="presentation")
-              = activate_link(@about_active,'O NAMA', '#', id: "about-us", "data-toggle": 'dropdown', role: 'button', "aria-expanded": false)
+              = activate_link(@about_active,"O NAMA", "#", id: "about-us", "data-toggle": "dropdown", role: "button", "aria-expanded": false)
               span.caret
               ul.dropdown-menu.dropdown-menu-left.sub_list (role="menu")
                 li (role="presentation")
-                  = activate_link(@company_history_active, 'Povijest kompanije', about_company_history_path,
-                    role: 'menuitem', tabindex: '-1')
+                  = activate_link(@company_history_active, "Povijest kompanije", about_company_history_path,
+                    role: "menuitem", tabindex: "-1")
                 li (role="presentation")
-                  = activate_link(@machinery_active, 'Postrojenje', about_machinery_path,
-                   role: 'menuitem', tabindex: '-1')
+                  = activate_link(@machinery_active, "Postrojenje", about_machinery_path,
+                   role: "menuitem", tabindex: "-1")
                 li (role="presentation")
-                  = activate_link(@employees_active, 'Zaposlenici', about_employees_path,
-                    role: 'menuitem', tabindex: '-1')
+                  = activate_link(@employees_active, "Zaposlenici", about_employees_path,
+                    role: "menuitem", tabindex: "-1")
             li.menu_divider.hidden-xs
               | /
             li.menu_item
-              = activate_link(@products_active, 'PONUDA', products_path)
+              = activate_link(@products_active, "PONUDA", products_path)
             li.menu_divider.hidden-xs
               | /
             li.menu_item
-              = activate_link(@contact_active, 'KONTAKT', contact_path)
+              = activate_link(@contact_active, "KONTAKT", contact_path)

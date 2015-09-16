@@ -299,9 +299,8 @@
 }
 
 /************************
-**** Company history ****
+***  Company history  ***
 *************************/
-
 .company-history-pic {
   background: #000 image-url("home_page/home_page_1.jpg") center center no-repeat;
   -webkit-background-size: cover;
@@ -329,7 +328,6 @@
   .history-pics {
     img {
       float: left;
-      border: 1px solid #000;
     }
   }
 }
@@ -342,8 +340,8 @@
     }
     .description { margin: 25px 0px 15px 0px; }
     .history-pics {
-      width: 302px;
-      height: 612px;
+      width: 300px;
+      height: 600px;
       margin: 20px auto;
     }
     .history-images { padding: 0px; }
@@ -355,8 +353,8 @@
   .company-history-pic {
     .description { margin: 65px 0px 15px 0px; }
     .history-pics {
-      width: 906px;
-      height: 204px;
+      width: 900px;
+      height: 200px;
       margin: 60px auto 60px;
     }
   }
@@ -367,7 +365,7 @@
 @media (min-width: 992px) {
   .company-history-pic {
     .history-pics {
-      height: 404px;
+      height: 400px;
       margin: 30px auto;
     }
   }
@@ -378,6 +376,110 @@
   .company-history-pic {
     .description { padding: 0px 27%; }
     .history-pics { margin: 80px auto 120px; }
+  }
+}
+
+/************************
+****    Machinery    ****
+*************************/
+.machinery-bg-pic {
+  background: #000 image-url("home_page/home_page_2.jpg") center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.machinery-content {
+  h3, p {
+    margin: 0px;
+    font-family: "OpenSans-Light";
+    color: #fff;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  #machinery-green-bar {
+    height: 5px;
+    width: 75px;
+    margin-bottom: 30px;
+    background-color: #22d3b6;
+  }
+
+  .machinery-description p {
+    margin: 0px;
+  }
+
+  #machinery-icon {
+    position: relative;
+    top: 340px;
+    width: 60px;
+    padding: 5px;
+    background-color: #22d3b6;
+  }
+}
+
+/* XS - Mobile */
+@media (max-width: 767px) {
+  .machinery-content {
+    margin-bottom: 25px;
+
+    h3, p { text-align: center; }
+    #machinery-green-bar {
+      margin: auto;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+/* SM */
+@media (min-width: 768px) and (max-width: 991px) {
+  .machinery-content {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    #machinery-icon { right: 262.5; }
+  }
+}
+
+/* MD */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .machinery-content {
+    margin-top: 80px;
+    margin-bottom: 120px;
+    #machinery-icon { right: 290.5; }
+
+    .machinery-description {
+      position: relative;
+      left: -30px;
+
+      p { overflow: hidden; }
+    }
+  }
+}
+
+/* LG */
+@media (min-width: 1200px) {
+  .machinery-content {
+    margin-top: 150px;
+    margin-bottom: 220px;
+
+    #machinery-icon {
+      position: relative;
+      top: 340px;
+      right: 472.5;
+      width: 60px;
+      padding: 5px;
+      background-color: #22d3b6;
+    }
+    .machinery-description {
+      position: relative;
+      left: -60px;
+
+      p { overflow: hidden; }
+    }
   }
 }
 
@@ -432,7 +534,6 @@
   }
 }
 
-
 /* XS - Mobile */
 @media (max-width: 767px) {
   .heading-bg { margin-bottom: 30px; }
@@ -463,93 +564,7 @@
 }
 
 /************************
-****    Machinery    ****
-*************************/
-.machinery-bg-pic {
-  background: #000 image-url("home_page/home_page_2.jpg") center center no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.machinery-content {
-  .machinery-pics img {
-    position: relative;
-    width: 50%;
-    border: 1px solid #000;
-  }
-
-  .machinery-icon {
-    position: absolute;
-    bottom: 1;
-    left: -25px;
-    width: 40px;
-    height: 40px;
-    border: none;
-    padding: 5px;
-    background-color: #22d3b6;
-
-    img {
-      height: 30px;
-      width: 30px;
-      border: none;
-    }
-  }
-
-  h3, p {
-    margin: 0px;
-    font-family: "OpenSans-Light";
-    color: #fff;
-  }
-
-  h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-
-  #machinery-green-bar {
-    height: 5px;
-    width: 75px;
-    margin-bottom: 30px;
-    background-color: #22d3b6;
-  }
-
-  p {
-    line-height: 1.7;
-  }
-}
-
-/* XS - Mobile */
-@media (max-width: 767px) {
-  .machinery-content {
-    margin-top: 50px;
-
-    h3, p { text-align: center; }
-    #machinery-green-bar {
-      margin: auto;
-      margin-bottom: 30px;
-    }
-  }
-}
-
-/* SM */
-@media (min-width: 768px) and (max-width: 991px) {
-  .machinery-content { margin-top: 70px; }
-}
-
-/* MD */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .machinery-content { margin-top: 105px; }
-}
-
-/* LG */
-@media (min-width: 1200px) {
-  .machinery-content { margin-top: 115px; }
-}
-
-/************************
-**** Products/Ponuda ****
+****     Products    ****
 *************************/
 .picture-bg {
   min-height: 100%;

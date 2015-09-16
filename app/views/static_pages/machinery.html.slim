@@ -1,21 +1,34 @@
 .container-fluid.about-us-bg.machinery-bg-pic
   .row.gradient-bg
     .col-xs-12
-      .heading-bg
-        h2 POSTROJENJE
-    .col-xs-12.col-sm-8.col-sm-offset-2
-      .row.machinery-content
-        .hidden-xs.col-sm-6.machinery-pics
-          = image_tag('about/200x150.png', alt: 'placeholder')
-          = image_tag('about/200x150.png', alt: 'placeholder')
-          = image_tag('about/200x150.png', alt: 'placeholder')
-          = image_tag('about/200x150.png', alt: 'placeholder')
-          .machinery-icon
-            = image_tag('about/machinery-icon.png', alt: 'placeholder')
-        .col-xs-12.col-sm-6
-          h3 POSTROJENJE KOMPANIJE
-          #machinery-green-bar
-          p
-            | Lorem ipsum dolor sit amet, at pri brute molestie probatus,
-            | novum deserunt te mei. Vim id homero deserunt. Mea consul
-            | gloriatur ad. Sint dolorum rationibus vel id.
+      .row
+        .col-xs-12
+          .heading-bg
+            h2 POSTROJENJE
+      .row
+        .container.machinery-content
+          .row
+            .hidden-xs.col-sm-5.col-sm-offset-1.col-md-8.col-md-offset-0.col-lg-7.col-lg-offset-0
+              = image_tag('about/thedog.jpg', alt: 'placeholder')
+              = image_tag('about/thedog.jpg', alt: 'placeholder')
+              = image_tag('about/thedog.jpg', alt: 'placeholder', class: "hidden-sm")
+              = image_tag('about/thedog.jpg', alt: 'placeholder', class: "hidden-sm")
+            .col-xs-10.col-xs-offset-1.col-sm-4.col-sm-offset-0.col-md-3.col-md-offset-0.col-lg-4.col-lg-offset-0.machinery-description
+              h3 POSTROJENJE KOMPANIJE
+              #machinery-green-bar
+              p
+                | Lorem ipsum dolor sit amet, at pri brute molestie probatus,
+                | novum deserunt te mei. Vim id homero deserunt. Mea consul
+                | gloriatur ad. Sint dolorum rationibus vel id.
+                | Lorem ipsum dolor sit amet, at pri brute molestie probatus,
+                | Lorem ipsum dolor sit amet, at pri brute molestie probatus,
+              br
+              p.visible-xs.visible-lg
+                | gloriatur ad. Sint dolorum rationibus vel id.
+                | Lorem ipsum dolor sit amet, at pri brute molestie probatus,
+                | novum deserunt te mei. Vim id homero deserunt. Mea consul
+                | gloriatur ad. Sint dolorum rationibus vel id.
+                | Lorem ipsum dolor sit amet, at pri brute molestie probatus,
+            .hidden-xs.col-sm-1
+              #machinery-icon
+                = image_tag("about/machinery-icon.png", size: "50")
